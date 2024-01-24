@@ -1,5 +1,6 @@
-import {motion} from 'framer-motion'
+import {motion,useAnimate} from 'framer-motion'
 import {useState} from 'react'
+import Edited from '../images/Edited.jpg'
 
 
 
@@ -13,7 +14,6 @@ const baza ={
         repeatType: 'reverse',
         duration: 0.5,
         ease: "easeInOut",
-        times: [0,, 0.5, 1],
         repeat: Infinity,}
     }
 }
@@ -40,11 +40,23 @@ const Fast = () => {
 
     const [isButtonClicked, setIsButtonClicked] = useState(false);
     const [isQiteClicked, setIsQiteClicked] = useState(false);
+    const [scope,animate] =useAnimate();
+
 
     const handleButtonClick = () => {
       setIsButtonClicked(!isButtonClicked);
       setIsQiteClicked(!isQiteClicked);
+        
     };
+
+    const removeEmojiClick = async () =>{
+        animate(scope.current,{opacity:1});
+    }
+
+    const AddEmojiClick = async () =>{
+        animate(scope.current,{opacity:0});
+    }
+
 
     return ( 
         <div className="fasto">
@@ -129,13 +141,26 @@ const Fast = () => {
                 <p style={{color:"#bbbbbb"}}>Background</p>
                 </div>
                 </button>
+                <button  onClick={()=>removeEmojiClick()} style={{backgroundColor:"#101419",border:"none",marginBottom:50,marginTop:10,marginLeft:30}}>
+                <div className="background-change">
+                <svg  class="simpleo" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="#3399ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 7.8v8.4M7.8 12h8.4m4.8 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+  </svg>
+                <p style={{color:"#bbbbbb"}}>Add</p>
+                </div>
+                </button>
+                <button  onClick={()=>AddEmojiClick()} style={{backgroundColor:"#101419",border:"none",marginBottom:50,marginTop:10,marginLeft:30}}>
+                <div className="background-change">
+                <svg className='simpleo' viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#3399ff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="32" cy="32" r="24"></circle><line x1="20" y1="32" x2="44" y2="32"></line></g></svg>
+                <p style={{color:"#bbbbbb"}}>Remove</p>
+                </div>
+                </button>
             </div>
             <div id='qite'  className={`edited-image ${isQiteClicked ? 'qite-change' : ''}`}  style={{
           transition: "background-color 0.3s easeInOut"
         }} >
-            <svg  width="60px" fill="#ffffff" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.5 10c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-9 0c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-1 10c-.507 0-.653.614-.315.888C10.803 22.243 12.89 23 15 23c2.11 0 4.203-.758 5.82-2.112.484-.404-.15-1.18-.64-.767-1.434 1.2-3.307 1.88-5.176 1.88-1.87 0-3.744-.68-5.176-1.88-.09-.076-.21-.12-.328-.12zM15 0C6.722 0 0 6.722 0 15c0 8.278 6.722 15 15 15 8.278 0 15-6.722 15-15 0-8.278-6.722-15-15-15zm0 1c7.738 0 14 6.262 14 14s-6.262 14-14 14S1 22.738 1 15 7.262 1 15 1z"></path></g></svg>
+            <svg ref={scope} className='change2' width="60px" fill="#ffffff" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.5 10c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-9 0c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-1 10c-.507 0-.653.614-.315.888C10.803 22.243 12.89 23 15 23c2.11 0 4.203-.758 5.82-2.112.484-.404-.15-1.18-.64-.767-1.434 1.2-3.307 1.88-5.176 1.88-1.87 0-3.744-.68-5.176-1.88-.09-.076-.21-.12-.328-.12zM15 0C6.722 0 0 6.722 0 15c0 8.278 6.722 15 15 15 8.278 0 15-6.722 15-15 0-8.278-6.722-15-15-15zm0 1c7.738 0 14 6.262 14 14s-6.262 14-14 14S1 22.738 1 15 7.262 1 15 1z"></path></g></svg>
                 </div>
-              
             </div>
             <div className="empty4"></div>
             <div className="empty4"></div>
