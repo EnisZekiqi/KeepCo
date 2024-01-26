@@ -16,7 +16,8 @@ import Second2 from './Second2';
 import Sponsors from './Sponsors'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NextPage from './NextPage';
-import  { useState } from 'react';
+import  { useState, useRef ,useEffect } from 'react';
+
 
 
 
@@ -66,10 +67,12 @@ function App() {
   
 
   const [showNextPage, setShowNextPage] = useState(false);
-
+  
+ 
   const navigateToNextPage = () => {
     setShowNextPage(true);
   };
+
 
   const goBackToHomePage = () => {
     setShowNextPage(false);

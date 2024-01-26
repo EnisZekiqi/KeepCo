@@ -17,6 +17,7 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import Fast from './features/Fast';
+import Secure from './features/Secure'
 
 const varianti={
     initial :{
@@ -34,7 +35,7 @@ const varianti={
 
 }
 
-const NextPage = ({ goBackToHomePage }) => {
+const NextPage = ({ goBackToHomePage  }) => {
 
 
 
@@ -112,15 +113,15 @@ const NextPage = ({ goBackToHomePage }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button  color='secondary' variant="text">
-                Fast
+                    <Button id='four'  className={`btn2 ${isButtonClicked === 'four' ? 'function' : ''}`}   onClick={() => handleButtonClick('four')} color='secondary' variant="text">
+                Secure
               </Button>
                 </motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button  color='secondary' variant="text">
+                    <Button color='secondary' variant="text">
                 Fast
               </Button>
                 </motion.li>
@@ -267,7 +268,25 @@ const NextPage = ({ goBackToHomePage }) => {
           </motion.div>
         )}
         </div>
+
+        <div className="hello4">
+        {activeContent === 'four' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Secure/>
+          </motion.div>
+        )}
+        </div>
       </div>
+      
      
 
       <div className="empty4"></div>

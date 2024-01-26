@@ -948,6 +948,7 @@ margin-right: 0;
 a{
   text-decoration: none;
 }
+
 .hello{
 
   display: flex;
@@ -975,7 +976,25 @@ a{
   align-content: flex-start;
 
 }
+.hello4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  
+}
 
+.ili{
+  border-radius: 10px;
+  border: 1px solid #3399ff;
+  width: 500px ;
+  height: 200px;
+}
+.lili2{
+  align-items: center;
+  align-content: center;
+}
 .cardi1{
   width: 250px;
   height: 175px;
@@ -1036,6 +1055,17 @@ a{
 .simpleo2{
   stroke-width: 0.5px;
   width: 70px;
+}
+.expord{
+    width: 500px;
+    height: 195px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 160, 51, 0.3);
+    background-color: rgba(255, 160, 51, 0.1);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-content: flex-start;
 }
 
 

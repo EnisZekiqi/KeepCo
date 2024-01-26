@@ -12,7 +12,7 @@ import {useRef ,useState} from 'react'
 import Tooltip from '@mui/material/Tooltip';
 import { Link, NavLink } from 'react-router-dom';
 import NextPage from './NextPage';
-
+import Fast from './features/Fast'
 
 
 
@@ -44,7 +44,9 @@ const fadeIn ={
 
 }
 
-const Second = ({ navigateToNextPage }) => {
+const Second = ({ navigateToNextPage   }) => {
+
+
 
     const [activeContent, setActiveContent] = useState('first');
 
@@ -52,10 +54,6 @@ const Second = ({ navigateToNextPage }) => {
         setActiveContent(activeContent === contentId ? null : contentId);
       };
 
-
-
-
-   
 
 
     return ( 
@@ -135,7 +133,7 @@ const Second = ({ navigateToNextPage }) => {
               <motion.div  whileHover={{scale:1.2}}
               whileTap={{scale:0.8}}
               className="mori1 text-center">
-              <Button variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
+              <Button  onClick={() => navigateToNextPage()} variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
               </motion.div>
             </div>
           </motion.div>
@@ -160,7 +158,7 @@ const Second = ({ navigateToNextPage }) => {
               <motion.div  whileHover={{scale:1.2}}
               whileTap={{scale:0.8}}
               className="mori1 text-center">
-              <Button variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
+              <Button onClick={() => navigateToNextPage()} variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
               </motion.div>
             </div>
           </motion.div>
@@ -185,7 +183,7 @@ const Second = ({ navigateToNextPage }) => {
               <motion.div  whileHover={{scale:1.2}}
               whileTap={{scale:0.8}}
               className="mori1 text-center">
-              <Button variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
+              <Button onClick={() => navigateToNextPage()} variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
               </motion.div>
             </div>
           </motion.div>
@@ -210,7 +208,7 @@ const Second = ({ navigateToNextPage }) => {
               <motion.div  whileHover={{scale:1.2}}
               whileTap={{scale:0.8}}
               className="mori1 text-center">
-              <Button variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
+              <Button onClick={() => navigateToNextPage()} variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
               </motion.div>
             </div>
           </motion.div>
@@ -235,7 +233,7 @@ const Second = ({ navigateToNextPage }) => {
               <motion.div  whileHover={{scale:1.2}}
               whileTap={{scale:0.8}}
               className="mori1 text-center">
-              <Button variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
+              <Button onClick={() => navigateToNextPage()} variant="text" startIcon={<MoreHorizIcon />}>More Info</Button>
               </motion.div>
             </div>
           </motion.div>

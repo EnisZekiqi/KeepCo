@@ -35,7 +35,7 @@ const shfaqe ={
 
 
 
-const Fast = () => {
+const Fast = ({ fast }) => {
 
 
     const [isButtonClicked, setIsButtonClicked] = useState(false);
@@ -59,7 +59,7 @@ const Fast = () => {
 
 
     return ( 
-        <div className="fasto">
+        <div id='fasto' className="fasto">
             <h1>Fast</h1>
             <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Fast website fast work for you</p>
             <h2 style={{marginTop:30}} className='d-flex justify-content-start' > Quickstart</h2>
@@ -162,7 +162,17 @@ const Fast = () => {
             <svg ref={scope} className='change2' width="60px" fill="#ffffff" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.5 10c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-9 0c.277 0 .5.223.5.5v3c0 .277-.223.5-.5.5s-.5-.223-.5-.5v-3c0-.277.223-.5.5-.5zm-1 10c-.507 0-.653.614-.315.888C10.803 22.243 12.89 23 15 23c2.11 0 4.203-.758 5.82-2.112.484-.404-.15-1.18-.64-.767-1.434 1.2-3.307 1.88-5.176 1.88-1.87 0-3.744-.68-5.176-1.88-.09-.076-.21-.12-.328-.12zM15 0C6.722 0 0 6.722 0 15c0 8.278 6.722 15 15 15 8.278 0 15-6.722 15-15 0-8.278-6.722-15-15-15zm0 1c7.738 0 14 6.262 14 14s-6.262 14-14 14S1 22.738 1 15 7.262 1 15 1z"></path></g></svg>
                 </div>
             </div>
-            <div className="empty4"></div>
+            <h5 style={{marginTop:50}}>Export Files Fast</h5>
+            <p style={{color:'#bbbbbb'}}>Again depending on the file size and interned speed the export can be different</p>
+            <div className="expord ">
+            <div className="warningu1 d-flex">
+            <svg style={{marginTop:10,marginLeft:10}} width="25px" height="25px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"  stroke-width="0.4800000000000001"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" ></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M11 13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10V13ZM13 15.9888C13 15.4365 12.5523 14.9888 12 14.9888C11.4477 14.9888 11 15.4365 11 15.9888V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V15.9888ZM9.37735 4.66136C10.5204 2.60393 13.4793 2.60393 14.6223 4.66136L21.2233 16.5431C22.3341 18.5427 20.8882 21 18.6008 21H5.39885C3.11139 21 1.66549 18.5427 2.77637 16.5431L9.37735 4.66136Z" fill="#ffff00"></path> </g></svg>
+          <p style={{marginTop:10 ,marginLeft:10, width:'fit-content',height:'fit-content'}}>The reason why we didn't measue the Expord Files is because </p>
+            </div>
+            <p style={{marginLeft:10, width:'fit-content',height:'fit-content'}}> sometimes the operative system like windows and mac have some safety system </p>
+            <p style={{marginLeft:10, width:'fit-content',height:'fit-content'}}>that checks some unnecesary and harful files so the process</p>
+            <p style={{marginLeft:10, width:'fit-content',height:'fit-content'}}>might take more time than usual </p>
+          </div>
             <div className="empty4"></div>
         </div>
      );
