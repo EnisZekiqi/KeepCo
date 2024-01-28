@@ -66,24 +66,16 @@ const Fast = ({ fast }) => {
             <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Fast feature exist to take less time for you to edit or export the files </p>
             <p  className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>For this feature to work you need to have those 3 elements so you can enjoy the best experience</p>
             <div style={{marginTop:30,marginBottom:30}} className="kiki d-flex  flex-row flex-wrap ">
-                <motion.div 
-                variants={baza}
-                initial="initial"
-                whileHover="animate"
-                className="cardi1 col-lg-4 col-md-6 col-sm-12">
+                <div className="cardi1 col-lg-4 col-md-6 col-sm-12">
                     <h3 style={{marginTop:10}} className="text-center">20MB</h3>
                     <p style={{width:'fit-content'}} className="text-center">You need to have at least <b className="bold">20MB</b> internet speed for our feature to work</p>
                     <p style={{width:'fit-content' , marginTop:-10}} className="text-center">otherwise this feature will be disabled automaticly </p>
-                </motion.div>
-                <motion.div
-                variants={baza}
-                initial="initial"
-                whileHover="animate"
-                className="cardi2 col-lg-4 col-md-6 col-sm-12 ">
+                </div>
+                <div className="cardi2 col-lg-4 col-md-6 col-sm-12 ">
                 <h3 style={{marginTop:10}} className="text-center">Secure Internet</h3>
                     <p style={{width:'fit-content'}} className="text-center">Internet needs to be equiped with some type of security like</p>
                     <p style={{width:'fit-content' , marginTop:-10}} className="text-center">Data Loss Prevention (DLP) , Intrusion Prevention Systems (IPS) </p>
-                </motion.div>
+                </div>
             </div>
             <h2 style={{marginTop:50}}>Basic</h2>
             <h5 style={{marginTop:30}}>Upload Files Fast</h5>

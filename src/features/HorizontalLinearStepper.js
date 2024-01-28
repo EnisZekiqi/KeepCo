@@ -6,7 +6,12 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+const steps = ['Select File', 'Secure File', 'Use our Features'];
+const stepContent = [
+  'Select a File of your preference to Edit or use our features',
+  'Once you select a file our system will check if it is a safe file',
+  'If it is a safe file you can use our features '
+]; 
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -89,7 +94,7 @@ export default function HorizontalLinearStepper() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+              <Typography style={{marginLeft:10}} sx={{ mt: 2, mb: 1 }}> {stepContent[activeStep]}</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"

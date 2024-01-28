@@ -985,11 +985,64 @@ a{
   
 }
 
+.hello5{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.enable-disable{
+  margin-top: 30px;
+}
+
 .ili{
   border-radius: 10px;
   border: 1px solid #3399ff;
   width: 500px ;
   height: 200px;
+}
+.ili0{
+  margin-top: 50px;
+}
+
+
+.malware{
+  width: 400px;
+  height: 180px;
+  border-right: 0.1px solid #3399ff;
+}
+.spam{
+  width: 400px;
+  height: 180px;
+  border-top: 1px solid #3399ff;
+  border-right: 1px solid #3399ff;
+}
+.future-attack{
+  width: 400px;
+  height: 180px;
+  border-top: 1px solid #3399ff;
+}
+
+@media (max-width: 768px) {
+  .malware{
+    border-right: 0px;
+    border-bottom: 1px solid #3399ff;
+  }
+  .spam{
+    border-right: 0px;
+  }
+  .future-attack{
+    border-left: 0px;
+  }
+}
+
+
+
+.blocklist{
+  width: 400px;
+  height: 180px;
 }
 .lili2{
   align-items: center;
@@ -1010,6 +1063,13 @@ a{
   box-shadow: 0 8px 32px rgb(51, 153, 255,0.5)inset;
   border-radius: 10px;
   margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+   .cardi1{
+    width: 200px;
+    height: 200px;
+   }
 }
 #borderi1{
   border-bottom: 1px solid #3399ff;
@@ -1068,6 +1128,18 @@ a{
    align-content: flex-start;
 }
 
+.expord-green{
+  margin-top: 30px;
+  width: 400px;
+    height: 125px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(0, 153, 51,0.3);
+    background-color: rgba(0, 153, 51, 0.1);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-content: flex-start;
+}
 
 @media(max-width:992px){
  
