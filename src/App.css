@@ -369,6 +369,9 @@ z-index: 1;
 .empty4{
   height: 200px;
 }
+.empty5{
+  height: 120px;
+}
 
 .show{
   opacity: 1;
@@ -452,6 +455,43 @@ background: linear-gradient(356deg, rgba(51,153,255,1) 0%, rgba(16,20,24,1) 61%)
 .function{
   background-color: #3399ff;
   box-shadow: 0 8px 32px 0 rgba(51, 153, 255,0.3)inset;
+}
+
+.textp{
+  display: flex;
+  justify-content: center;
+}
+.tregojTexti{
+  margin-left: 200px;
+}
+.btno{
+  font-weight: 500;
+}
+.function2{
+ margin-right: 300px;
+ transition:  0.3s ease;
+}
+.functionn{
+  background-color: rgba(51, 153, 255,0.6);
+  box-shadow: 0 8px 32px 0 rgba(51, 153, 255,0.15)inset;
+}
+.function3{
+ margin-right: 0px;
+ transition:  0.3s ease;
+}
+.function4{
+  margin-left: 300px;
+  margin-right: 0px;
+ transition:  0.3s ease;
+}
+.function5{
+  font-weight: 700;
+}
+.function6{
+  font-style: italic;
+}
+.function7{
+  text-decoration: underline;
 }
 .btn2{
   background-color: #101418;
@@ -993,6 +1033,14 @@ a{
   align-content: flex-start;
 }
 
+.hello6{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  width: 90%;
+}
 .enable-disable{
   margin-top: 30px;
 }
@@ -1108,6 +1156,7 @@ a{
   background-color: rgba(51, 153, 255, 0.171);
   
 }
+
 
 .qite-change2{
   opacity: 1;

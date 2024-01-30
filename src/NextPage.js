@@ -19,6 +19,7 @@ import UploadFileIcon from '@mui/icons-material/UploadFile';
 import Fast from './features/Fast';
 import Secure from './features/Secure';
 import Protection from './features/Protection';
+import Edit from './features/Edit'
 
 const varianti={
     initial :{
@@ -81,11 +82,11 @@ const NextPage = ({ goBackToHomePage  }) => {
         </Toolbar>
       </AppBar>
 
-        <div className="ovealli d-flex justify-content-between">
+        <div style={{marginTop:10}} className="ovealli d-flex justify-content-between">
         {showDrawer ? (
         <Drawer color='#101419' goBackToHomePage={goBackToHomePage} />
       ) : (
-        <div className='llojet-features d-flex'>
+        <div style={{marginTop:10}} className='llojet-features d-flex'>
             <div style={{color:'#3399ff'}} className="ulo d-flex justify-content-start">
             <ul style={{listStyleType:'none',marginRight:50,marginLeft:25}}>
             <motion.li variants={varianti}
@@ -122,7 +123,7 @@ const NextPage = ({ goBackToHomePage  }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button id='five'  className={`btn2 ${isButtonClicked === 'five' ? 'function' : ''}`} onClick={() => handleButtonClick('five')} color='secondary' variant="text">
+                    <Button id='five' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'five' ? 'function' : ''}`} onClick={() => handleButtonClick('five')} color='secondary' variant="text">
                 Protection
               </Button>
                 </motion.li>
@@ -130,8 +131,8 @@ const NextPage = ({ goBackToHomePage  }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button color='secondary' variant="text">
-                Fast
+                    <Button id='six' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'six' ? 'function' : ''}`} onClick={() => handleButtonClick('six')} color='secondary' variant="text">
+                Edit
               </Button>
                 </motion.li>
             <motion.li variants={varianti}
@@ -164,7 +165,7 @@ const NextPage = ({ goBackToHomePage  }) => {
             </div>
     </div>
       )}
-      <div className='hello'>
+      <div style={{marginTop:10}} className='hello'>
 
       {activeContent === 'first' && (
         <motion.div
@@ -299,6 +300,22 @@ const NextPage = ({ goBackToHomePage  }) => {
          }}
           id='four' className='container-xxl' style={{color:'#ffffff'}}> 
          <Protection/>
+          </motion.div>
+        )}
+        </div>
+        <div className="hello6">
+        {activeContent === 'six' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Edit/>
           </motion.div>
         )}
         </div>

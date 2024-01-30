@@ -23,8 +23,8 @@ const Protection = () => {
             <p style={{marginLeft:10, width:'fit-content',height:'fit-content'}}> Thats why this feature is in 15 browsers including Google Chrome , FireFox and Opera </p>
            
           </div>
-<div className="empty4"></div> 
-<div className="empty4"></div>
+<div className="empty5"></div> 
+<div className="empty5"></div>
         </div>
      );
 }

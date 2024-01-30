@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export default function BadgeVisibility() {
   
-  const [invisible, setInvisible] = React.useState(false);
+  const [invisible, setInvisible] = React.useState(true);
 
   const handleBadgeVisibility = () => {
     setInvisible(!invisible);
@@ -34,7 +34,7 @@ export default function BadgeVisibility() {
     >
       <div>
         <Badge color="secondary" variant="dot" invisible={!invisible}>
-          <YouTubeIcon style={{color:'#3399ff'}} />
+          <YouTubeIcon style={{color:'#ff0000'}} />
         </Badge>
         <FormControlLabel
           sx={{ color: '#ffffff' }}
