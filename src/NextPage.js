@@ -89,25 +89,37 @@ const NextPage = ({ goBackToHomePage  }) => {
         <div style={{marginTop:10}} className='llojet-features d-flex'>
             <div style={{color:'#3399ff'}} className="ulo d-flex justify-content-start">
             <ul style={{listStyleType:'none',marginRight:50,marginLeft:25}}>
+              <motion.li
+              variants={varianti}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              ><h5 style={{color:'#3399ff',marginLeft:10}}>Getting started</h5></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }}> <Button style={{marginBottom:10}} id='first'  className={`btn2 ${isButtonClicked === 'first' ? 'function' : ''}`}  onClick={() => handleButtonClick('first')} color='secondary' variant="text">
+                viewport={{ once: true }}> <Button style={{marginBottom:10,marginTop:10}} id='first'  className={`btn2 ${isButtonClicked === 'first' ? 'function' : ''}`}  onClick={() => handleButtonClick('first')} color='secondary' variant="text">
                 Overview
               </Button></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button style={{marginBottom:10}} id='second'  className={`btn2 ${isButtonClicked === 'second' ? 'function' : ''}`}   onClick={() => handleButtonClick('second')} color='secondary' variant="text">
+                    <Button style={{marginBottom:20}} id='second'  className={`btn2 ${isButtonClicked === 'second' ? 'function' : ''}`}   onClick={() => handleButtonClick('second')} color='secondary' variant="text">
                 Usage
               </Button>
                 </motion.li>
+                <motion.li
+              variants={varianti}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              ><h5 style={{color:'#3399ff',marginLeft:5}}>General</h5></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button style={{marginBottom:10}} id='third'  className={`btn2 ${isButtonClicked === 'third' ? 'function' : ''}`}   onClick={() => handleButtonClick('third')} color='secondary' variant="text">
+                    <Button style={{marginBottom:10,marginTop:10}} id='third'  className={`btn2 ${isButtonClicked === 'third' ? 'function' : ''}`}   onClick={() => handleButtonClick('third')} color='secondary' variant="text">
                 Fast
               </Button>
                 </motion.li>
@@ -123,16 +135,22 @@ const NextPage = ({ goBackToHomePage  }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button id='five' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'five' ? 'function' : ''}`} onClick={() => handleButtonClick('five')} color='secondary' variant="text">
+                    <Button id='five' style={{marginBottom:20}} className={`btn2 ${isButtonClicked === 'five' ? 'function' : ''}`} onClick={() => handleButtonClick('five')} color='secondary' variant="text">
                 Protection
               </Button>
                 </motion.li>
+                <motion.li
+              variants={varianti}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              ><h5 style={{color:'#3399ff',marginLeft:10}}>Editor</h5></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button id='six' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'six' ? 'function' : ''}`} onClick={() => handleButtonClick('six')} color='secondary' variant="text">
-                Edit
+                    <Button id='six' style={{marginBottom:10,marginTop:10}} className={`btn2 ${isButtonClicked === 'six' ? 'function' : ''}`} onClick={() => handleButtonClick('six')} color='secondary' variant="text">
+                Text
               </Button>
                 </motion.li>
             <motion.li variants={varianti}
@@ -186,8 +204,8 @@ const NextPage = ({ goBackToHomePage  }) => {
         <h2 style={{marginTop:30}} className='d-flex justify-content-start' >Why choose us</h2>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>When we first launched we were the first one in the market to create such a website and company </p>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>so we got more experience in every aspect of this category</p>
-        <div className="empty"></div>
-        <div className="empty"></div>
+        <div className="empty4"></div>
+        <div className="empty4"></div>
         </motion.div>
       )}
         <div className="hello2">
