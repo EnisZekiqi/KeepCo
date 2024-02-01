@@ -1061,12 +1061,40 @@ a{
   background-color:#ff4d4d ;
   margin-top: 10px;
 }
+.redi-color{
+  color: #ff4d4d;
+}
+.redi-replicant{
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color:rgba(255, 77, 77,0.4) ;
+  margin-top: 10px;
+}
+.redi-replicant-color{
+  color: rgba(255, 77, 77,0.4);
+}
+
+
 .pinki{
   background-color: #ff6699;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 10px;
+}
+.pinki-color{
+  color: #ff6699;
+}
+.pinki-replicant{
+  background-color: #fd94b7;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+}
+.pinki-replicant-color{
+  color: #fd94b7;
 }
 .purpli{
   background-color:#ff00ff ;
@@ -1075,12 +1103,38 @@ a{
   border: none;
   margin-top: 10px;
 }
+.purpli-color{
+  color:#ff00ff
+}
+.purpli-replicant{
+  background-color:#ff7bff ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+}
+.purpli-replicant-color{
+  color: #ff7bff;
+}
 .purpli2{
   background-color:#6600f5;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 10px;
+}
+.purpli2-color{
+  color:#6600f5
+}
+.purpli2-replicant{
+  background-color:#7753aa;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+}
+.purpli2-replicant-color{
+  color: #7753aa;
 }
 .blui{
   background-color: #3366ff  ;
@@ -1089,12 +1143,38 @@ a{
   border: none;
   margin-top: 0px;
 }
+.blui-color{
+  color:#3366ff;
+}
+.blui-replicant{
+  background-color: #6479bb  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.blui-replicant-color{
+  color: #6479bb;
+}
 .blui2{
   background-color: #3399ff  ;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 0px;
+}
+.blui2-color{
+  color:#3399ff;
+}
+.blui2-replicant{
+  background-color: #1f5081  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.blui2-replicant-color{
+  color: #1f5081;
 }
 .blui3{
   background-color:  #33cccc ;
@@ -1103,12 +1183,38 @@ a{
   border: none;
   margin-top: 0px;
 }
+.blui3-color{
+  color: #33cccc;
+}
+.blui3-replicant{
+  background-color:  #1d6d6d ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.blui3-replicant-color{
+  color: #1d6d6d;
+}
 .blui4{
   background-color: #00cc99 ;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 0px;
+}
+.blui4-color{
+  color: #00cc99;
+}
+.blui4-replicant{
+  background-color: #0f6953 ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.blui4-replicant-color{
+  color: #0f6953;
 }
 .greni{
   background-color: #00cc00  ;
@@ -1117,12 +1223,38 @@ a{
   border: none;
   margin-top: 0px;
 }
+.greni-color{
+  color:#00cc00;
+}
+.greni-replicant{
+  background-color: #156d15  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.greni-replicant-color{
+  color: #156d15;
+}
 .greni2{
   background-color:  #336600  ;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 0px;
+}
+.greni2-color{
+  color: #336600;
+}
+.greni2-replicant{
+  background-color:  #5c9b1d  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.greni2-replicant-color{
+  color: #5c9b1d;
 }
 .greni3{
   background-color:#999966  ;
@@ -1131,12 +1263,78 @@ a{
   border: none;
   margin-top: 0px;
 }
+.greni3-color{
+  color:#999966;
+}
+.greni3-replicant{
+  background-color:#999948  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.greni3-replicant-color{
+  color: #999948;
+}
 .greni4{
   background-color: #ffff00  ;
   width: 50px;
   height: 50px;
   border: none;
   margin-top: 0px;
+}
+.greni4-color{
+  color: #ffff00;
+}
+.greni4-replicant{
+  background-color: #46460e  ;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin-top: 0px;
+}
+.greni4-replicant-color{
+  color: #46460e;
+}
+.colori-text{
+  width: 300px;
+  align-items: center;
+}
+.secondin{
+  margin-left: 60px;
+}
+.size-style{
+  margin-top: 65px;
+}
+@media (max-width: 768px) {
+  .secondin{
+   margin-left: 0px;
+  }
+ }
+@media (max-width: 1070px) {
+ .colori-text{
+  position: absolute;
+  margin-top: 300px;
+ }
+ .size-style{
+  margin-top: 200px;
+ }
+}
+@media (max-width: 768px) {
+  .colori-text{
+   position: absolute;
+   margin-top: 500px;
+   margin-left: -65px;
+  }
+ }
+
+.clicked{
+  background-image: url(images/ok-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  border: 1px solid #ffffff;
+  background-position: center center;
+  transition: background-image 0.3 ease;
+
 }
 
 .malware{
@@ -1166,6 +1364,13 @@ a{
   }
   .future-attack{
     border-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .primary-secondary{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
   }
 }
 

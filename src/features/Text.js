@@ -99,7 +99,7 @@ const [isButtonClicked, setIsButtonClicked] = useState(null);
             <FormatAlignCenterIcon />
           </ToggleButton>
             </Tooltip>
-            <Tooltip title="Text-Center" placement="bottom">
+            <Tooltip title="Text-End" placement="bottom">
             <ToggleButton className={`btn2 ${isButtonClicked === 'third' ? 'functionn' : ''}`} onClick={() => handleButtonClick('third')} style={{color:'#3399ff'}} value="right" aria-label="right aligned">
             <FormatAlignRightIcon />
           </ToggleButton>
