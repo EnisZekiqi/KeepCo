@@ -1327,6 +1327,52 @@ a{
    margin-left: -65px;
   }
  }
+#arial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.arial2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+#tahoma{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tahoma2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#georgia{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.georgia2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#Garamond {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Garamond2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#NewRoman{
+  font-family: 'Times New Roman', Times, serif;
+}
+.NewRoman{
+  font-family: 'Times New Roman', Times, serif;
+}
+#basic-button{
+  height: fit-content;
+  margin-right: 20px;
+}
+.font-change{
+  margin-left: 100px;
+}
+
+@media (max-width: 710px) {
+ .slider{
+  margin-bottom: 100px;
+ }
+ .font-change{
+  margin-left: 0px;
+ }
+}
 
 .clicked{
   background-image: url(images/ok-svgrepo-com.svg);

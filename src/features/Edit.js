@@ -9,6 +9,8 @@ import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import { useState } from 'react';
 import { useAnimate } from 'framer-motion';
+import ContinousSlider from './ContinousSlider';
+import BasicMenu from './BasicMenu';
 const Edit = () => {
 
     const [scope,animate] =useAnimate();
@@ -168,12 +170,21 @@ const Edit = () => {
                   
                     </div>
                     <h2 className='size-style'>Size and Style</h2>
-                    <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Costumize text with a lot of different colors </p>
+                    <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Change font and change the size of the text </p>
+                    <h6 style={{marginTop:40}}>Text Size</h6>
+                    <div style={{marginTop:20}} className="row">
+                        <div className="slider col">
+                        <ContinousSlider/>
+                        </div>
+                    <div className="font-change col">
+                        <BasicMenu/>
+                    </div>
+                    </div>
+                    
                 </div>
             </div>
                 
             </div>
-            <div className="empty4"></div>
             <div className="empty4"></div>
         </div>
      );
