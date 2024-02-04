@@ -20,7 +20,7 @@ import Fast from './features/Fast';
 import Secure from './features/Secure';
 import Protection from './features/Protection';
 import Edit from './features/Edit'
-
+import Image from './features/Image'
 const varianti={
     initial :{
         y:-20,
@@ -64,7 +64,7 @@ const NextPage = ({ goBackToHomePage  }) => {
 
 
     return ( 
-        <div >
+        <div style={{ margin: 0 }} >
       <AppBar  sx={{ backgroundColor: '#101419' }} position="fixed">
         <Toolbar>
           <IconButton  style={{ color:'#3399ff' }} sx={{ Color: '#3399ff' }} aria-label="open drawer" edge="start" onClick={toggleDrawer}>
@@ -81,12 +81,11 @@ const NextPage = ({ goBackToHomePage  }) => {
           </Typography>
         </Toolbar>
       </AppBar>
-
-        <div style={{marginTop:10}} className="ovealli d-flex justify-content-between">
+        <div className="ovealli d-flex justify-content-between">
         {showDrawer ? (
         <Drawer color='#101419' goBackToHomePage={goBackToHomePage} />
       ) : (
-        <div style={{marginTop:10}} className='llojet-features d-flex'>
+        <div className='llojet-features d-flex'>
             <div style={{color:'#3399ff'}} className="ulo d-flex justify-content-start">
             <ul style={{listStyleType:'none',marginRight:50,marginLeft:25}}>
               <motion.li
@@ -156,8 +155,8 @@ const NextPage = ({ goBackToHomePage  }) => {
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }}><Button  color='secondary' variant="text">
-                Fast
+                viewport={{ once: true }}><Button id='six' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'seven' ? 'function' : ''}`} onClick={() => handleButtonClick('seven')} color='secondary' variant="text">
+                Image
               </Button></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
@@ -173,12 +172,7 @@ const NextPage = ({ goBackToHomePage  }) => {
                 Fast
               </Button>
                 </motion.li>
-            <motion.li variants={varianti}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}><Button color='secondary' variant="text">
-                Fast
-              </Button></motion.li>
+              
         </ul>
             </div>
     </div>
@@ -204,8 +198,7 @@ const NextPage = ({ goBackToHomePage  }) => {
         <h2 style={{marginTop:30}} className='d-flex justify-content-start' >Why choose us</h2>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>When we first launched we were the first one in the market to create such a website and company </p>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>so we got more experience in every aspect of this category</p>
-        <div className="empty4"></div>
-        <div className="empty4"></div>
+       
         </motion.div>
       )}
         <div className="hello2">
@@ -337,11 +330,24 @@ const NextPage = ({ goBackToHomePage  }) => {
           </motion.div>
         )}
         </div>
+        <div className="hello7">
+        {activeContent === 'seven' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Image/>
+          </motion.div>
+        )}
+        </div>
       </div>
       
-     
-
-      <div className="empty4"></div>
          </div>
 
     </div>

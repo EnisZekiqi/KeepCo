@@ -2,7 +2,7 @@
 
 *{
   font-family: 'Belanosima', sans-serif;
-  
+
 }
 html{
   scroll-behavior: smooth;
@@ -983,7 +983,26 @@ margin-right: 0;
   list-style: none;
   list-style-type: none;
   text-decoration: none;
-  border-right: 1px solid rgba(187, 187, 187,0.4);
+  overflow-y: auto; /* or overflow-y: scroll; */
+  border-right: 1px solid #bbbbbb6e;
+  max-height: 800px;
+  overflow-x: hidden;
+}
+.llojet-features::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+.llojet-features::-webkit-scrollbar-thumb {
+  background-color: #28323e; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+  border: 1px solid transparent;
+  
+}
+.llojet-features::-webkit-scrollbar-track {
+  background-color: #101419; /* Set the color of the scrollbar track */
+}
+
+.empty7{
+  height: 60px;
 }
 a{
   text-decoration: none;
@@ -1040,6 +1059,18 @@ a{
   align-items: center;
   align-content: flex-start;
   width: 90%;
+}
+.hello7{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  width: 90%;
+}
+.edit0image{
+  border: none;
+  background-color: #101419;
 }
 .enable-disable{
   margin-top: 30px;

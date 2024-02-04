@@ -177,7 +177,8 @@ const Edit = () => {
                         <ContinousSlider/>
                         </div>
                     <div className="font-change col">
-                        <BasicMenu/>
+                    <h6 style={{marginTop:-20}}>Text Font</h6>
+                        <BasicMenu style={{marginTop:20}}/>
                     </div>
                     </div>
                     
