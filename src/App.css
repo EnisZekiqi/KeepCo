@@ -969,6 +969,32 @@ margin-right: 0;
 
 }
 
+
+#opcionet{
+width: 350px;
+margin-top: 20px;
+}
+#opcionet2{
+  width: 200px;
+  margin-top: 50px;
+}
+.hidden{
+  width: fit-content;
+  align-items: center;
+}
+
+
+#mshefur{
+  opacity:0;
+  display: none;
+}
+#mshefur2{
+  width: fit-content;
+  opacity:0;
+  display: none;
+  position: absolute;
+}
+
 .llojet2{
   margin-left: 80px;
 }
@@ -985,7 +1011,7 @@ margin-right: 0;
   text-decoration: none;
   overflow-y: auto; /* or overflow-y: scroll; */
   border-right: 1px solid #bbbbbb6e;
-  max-height: 800px;
+  max-height: max-content;
   overflow-x: hidden;
 }
 .llojet-features::-webkit-scrollbar {

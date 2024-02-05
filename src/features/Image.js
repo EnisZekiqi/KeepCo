@@ -4,7 +4,35 @@ import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import mountain from '../images/mountain.jpg'
 import VignetteIcon from '@mui/icons-material/Vignette';
+import { motion,useAnimate } from 'framer-motion';
+import { useState } from 'react';
+import CustomInputAutocomplete from './CustomInputAutocomplete';
+import RotateRight from './RotateRight';
+import RotateLeft from './RotateLeft';
+
 const Image = () => {
+
+    const [scope,animate]=useAnimate();
+    const [scope2,animate2]=useAnimate();
+    const [scope3,animate3]=useAnimate();
+
+
+    const startContent = async () =>{
+        animate(scope.current,{opacity:1 ,display:'block' , transition:{duration:1}})
+        animate2(scope2.current,{opacity:0 ,display:'',transition:{duration:1}})
+        animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+    }
+    const startContent2 = async () =>{
+        animate2(scope2.current,{opacity:1 ,display:'block' ,transition:{duration:1}})
+        animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
+        animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+    }
+
+const startContent3 = async () =>{
+    animate2(scope2.current,{opacity:0,display:'' ,transition:{duration:1}})
+    animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
+    animate3(scope3.current,{opacity:1 ,display:'block',transition:{duration:1}})
+}
     return ( 
         <div className="imageo">
             <h1>Image</h1>
@@ -38,13 +66,13 @@ const Image = () => {
             <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Apply any of the features on the image</p>
             <div style={{marginTop:50}} className="d-flex flex-column">
                 <div className="d-flex justify-content-center">
-                <button  className="edit0image">
+                <button onClick={()=> startContent()}  className="edit0image">
                 <CropIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button className="edit0image">
+                <button onClick={()=> startContent2()} className="edit0image">
                 <RotateRightIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button className="edit0image">
+                <button  onClick={()=> startContent3()} className="edit0image">
                 <RotateLeftIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
                 <button className="edit0image">
@@ -54,8 +82,17 @@ const Image = () => {
                 <VignetteIcon style={{color:'#3399ff',marginRight:30}}/> 
                 </button>
                 </div>
-                <div style={{marginTop:50}} className="imaguieditura d-flex justify-content-center">
-                    <img style={{width:300}} src={mountain} alt="" />
+
+                <div style={{marginTop:30}} className="hiddenn d-flex justify-content-center ">
+                    <div id='mshefur' ref={scope} className="">
+                    <CustomInputAutocomplete/>
+                    </div>
+                    <div id='mshefur' ref={scope2} className="">
+                    <RotateRight/>
+                    </div>
+                    <div id='mshefur' ref={scope3} className="">
+                    <RotateLeft/>
+                    </div>
                 </div>
             </div>
             <div className="empty4"></div>
