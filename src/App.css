@@ -725,7 +725,6 @@ input{
 
 .empty{
   height: 100px;
-  background-color: #101418;
 }
 
 .rendi1{
@@ -925,7 +924,7 @@ place-items: center;
 }
 
 .container-fluid{
-  background-color: #101418;
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -933,7 +932,6 @@ place-items: center;
   height: 100%;
 }
 .info{
-  background: url(images/gradianet.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: fixed;
@@ -968,7 +966,19 @@ margin-right: 0;
   }
 
 }
-
+.homi{
+ background:url(images/Shiny\ Overlay.svg);
+border-radius: 10px;
+}
+.logoja{
+ position: absolute;
+ background-color: #101418;
+ top: 480px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #101419;
+  border-radius: 50%;
+}
 
 #opcionet{
 width: 350px;
@@ -1009,10 +1019,8 @@ margin-top: 20px;
   list-style: none;
   list-style-type: none;
   text-decoration: none;
-  overflow-y: auto; /* or overflow-y: scroll; */
   border-right: 1px solid #bbbbbb6e;
   max-height: max-content;
-  overflow-x: hidden;
 }
 .llojet-features::-webkit-scrollbar {
   width: 5px; /* Set the width of the scrollbar */
@@ -1439,7 +1447,9 @@ a{
   transition: background-image 0.3 ease;
 
 }
-
+.clicked2{
+ box-shadow: 0 8px 32px rgb(51, 153, 255,0.5)inset;;
+}
 .malware{
   width: 400px;
   height: 180px;

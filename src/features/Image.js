@@ -9,30 +9,58 @@ import { useState } from 'react';
 import CustomInputAutocomplete from './CustomInputAutocomplete';
 import RotateRight from './RotateRight';
 import RotateLeft from './RotateLeft';
-
+import BlurEffect from './BlurEffect';
+import BoxShadowEffect from './BoxShadowEffect';
 const Image = () => {
+
+    const [isButtonClicked, setIsButtonClicked] = useState(null);
 
     const [scope,animate]=useAnimate();
     const [scope2,animate2]=useAnimate();
     const [scope3,animate3]=useAnimate();
+    const [scope4,animate4]=useAnimate();
+    const [scope5,animate5]=useAnimate();
 
 
     const startContent = async () =>{
         animate(scope.current,{opacity:1 ,display:'block' , transition:{duration:1}})
         animate2(scope2.current,{opacity:0 ,display:'',transition:{duration:1}})
         animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+        animate4(scope4.current,{opacity:0 ,display:'',transition:{duration:1}})
+        animate5(scope5.current,{opacity:0 ,display:'',transition:{duration:1}})
     }
     const startContent2 = async () =>{
         animate2(scope2.current,{opacity:1 ,display:'block' ,transition:{duration:1}})
         animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
         animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+        animate4(scope4.current,{opacity:0 ,display:'',transition:{duration:1}})
+        animate5(scope5.current,{opacity:0 ,display:'',transition:{duration:1}})
     }
 
 const startContent3 = async () =>{
     animate2(scope2.current,{opacity:0,display:'' ,transition:{duration:1}})
     animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
     animate3(scope3.current,{opacity:1 ,display:'block',transition:{duration:1}})
+    animate4(scope4.current,{opacity:0, display:'', transition:{duration:1}})
+    animate5(scope5.current,{opacity:0, display:'', transition:{duration:1}})
 }
+const startContent4 = async () =>{
+    animate2(scope2.current,{opacity:0,display:'' ,transition:{duration:1}})
+    animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
+    animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+    animate4(scope4.current,{opacity:1 ,display:'block',transition:{duration:1}})
+    animate5(scope5.current,{opacity:0 ,display:'',transition:{duration:1}})
+}
+const startContent5 = async () =>{
+    animate2(scope2.current,{opacity:0,display:'' ,transition:{duration:1}})
+    animate(scope.current,{opacity:0, display:'', transition:{duration:1}})
+    animate3(scope3.current,{opacity:0 ,display:'',transition:{duration:1}})
+    animate4(scope4.current,{opacity:0 ,display:'',transition:{duration:1}})
+    animate5(scope5.current,{opacity:1 ,display:'block',transition:{duration:1}})
+}
+
+
+
     return ( 
         <div className="imageo">
             <h1>Image</h1>
@@ -66,19 +94,19 @@ const startContent3 = async () =>{
             <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Apply any of the features on the image</p>
             <div style={{marginTop:50}} className="d-flex flex-column">
                 <div className="d-flex justify-content-center">
-                <button onClick={()=> startContent()}  className="edit0image">
+                <button id='first' className={`edit0image ${isButtonClicked === 'first' ? 'clicked2' : ''}`} onClick={()=> startContent('first')} >
                 <CropIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button onClick={()=> startContent2()} className="edit0image">
+                <button id='second' onClick={()=> startContent2('second')} className="edit0image">
                 <RotateRightIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button  onClick={()=> startContent3()} className="edit0image">
+                <button id='third' onClick={()=> startContent3('third')} className="edit0image">
                 <RotateLeftIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button className="edit0image">
+                <button id='four' onClick={()=> startContent4('four')} className="edit0image">
                 <WaterDropIcon style={{color:'#3399ff',marginRight:10}}/> 
                 </button>
-                <button className="edit0image">
+                <button id='five' onClick={()=> startContent5('five')} className="edit0image">
                 <VignetteIcon style={{color:'#3399ff',marginRight:30}}/> 
                 </button>
                 </div>
@@ -92,6 +120,12 @@ const startContent3 = async () =>{
                     </div>
                     <div id='mshefur' ref={scope3} className="">
                     <RotateLeft/>
+                    </div>
+                    <div id='mshefur' ref={scope4} className="">
+                    <BlurEffect/>
+                    </div>
+                    <div id='mshefur' ref={scope5} className="">
+                    <BoxShadowEffect/>
                     </div>
                 </div>
             </div>

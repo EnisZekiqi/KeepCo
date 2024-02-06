@@ -85,12 +85,14 @@ function App() {
       <div className="Keepco">
         <div className="Baza">
           <ResponsiveAppBar />
-          <Empty />
           {showNextPage ? (
             <NextPage goBackToHomePage={goBackToHomePage} />
           ) : (
             <>
+              <div className="homi">
+              <Empty />
               <Home />
+              </div>
               <Second navigateToNextPage={navigateToNextPage} />
               <div className="ndamas">
                 <Third />

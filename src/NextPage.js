@@ -64,7 +64,8 @@ const NextPage = ({ goBackToHomePage  }) => {
 
 
     return ( 
-        <div style={{ margin: 0 }} >
+        <div style={{ marginTop: 10 }} >
+          <div className="empty5"></div>
       <AppBar  sx={{ backgroundColor: '#101419' }} position="fixed">
         <Toolbar>
           <IconButton  style={{ color:'#3399ff' }} sx={{ Color: '#3399ff' }} aria-label="open drawer" edge="start" onClick={toggleDrawer}>
