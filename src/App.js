@@ -3,20 +3,18 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 
-import Navbar from './Navbar';
+
 import Empty from './Empty'
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemeProvider} from '@mui/material/styles';
 import Second from './Second'
-import { blue } from '@mui/material/colors';
 import ResponsiveAppBar from './ResponsiveAppBar';
 import Third from './Third'
 import Home from './Home'
 import Four from './Four'
-import Second2 from './Second2';
+
 import Sponsors from './Sponsors'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NextPage from './NextPage';
-import  { useState, useRef ,useEffect } from 'react';
+import  { useState, } from 'react';
 
 
 
@@ -37,6 +35,9 @@ const theme = createTheme({
     },
     forth:{
       main:'#ffffff'
+    },
+    five:{
+      main:'rgba(16, 20, 25,0.5)'
     }
   },
     typography: {
@@ -60,7 +61,6 @@ const theme = createTheme({
   
 })
 
-const color = blue[100];
 
 
 function App() {
@@ -78,7 +78,6 @@ function App() {
     setShowNextPage(false);
   };
 
-  const title = 'Welcome to Zeka'
 
   return (
     <ThemeProvider theme={theme}>

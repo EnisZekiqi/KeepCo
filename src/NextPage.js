@@ -21,6 +21,7 @@ import Secure from './features/Secure';
 import Protection from './features/Protection';
 import Edit from './features/Edit'
 import Image from './features/Image'
+import Effects from './features/Effects';
 const varianti={
     initial :{
         y:-20,
@@ -56,21 +57,43 @@ const NextPage = ({ goBackToHomePage  }) => {
       
 
 
-    const [showDrawer, setShowDrawer] = useState(false);
+    const [showDrawer, setShowDrawer] = useState(window.innerWidth <= 700);
+    const [showBackdrop, setShowBackdrop] = useState(false);
+
 
   const toggleDrawer = () => {
     setShowDrawer(!showDrawer);
+    setShowBackdrop(!showBackdrop);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setShowDrawer(window.innerWidth <= 700);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     return ( 
         <div style={{ marginTop: 10 }} >
           <div className="empty5"></div>
       <AppBar  sx={{ backgroundColor: '#101419' }} position="fixed">
         <Toolbar>
+          <div className="gg">
           <IconButton  style={{ color:'#3399ff' }} sx={{ Color: '#3399ff' }} aria-label="open drawer" edge="start" onClick={toggleDrawer}>
             <MenuIcon />
           </IconButton>
+          </div>
+          <div className="gg2">
+          <IconButton  style={{ color:'#3399ff' }} sx={{ Color: '#3399ff' }} aria-label="open drawer" edge="start" onClick={toggleDrawer}>
+            <MenuIcon />
+          </IconButton>
+          </div>
+          <div className="gg3">
           <Typography style={{  fontWeight: 700,
               letterSpacing: '.3rem',
               color: '#ffffff',
@@ -80,6 +103,7 @@ const NextPage = ({ goBackToHomePage  }) => {
               color: '#ffffff',
               textDecoration: 'none', }} href="/">KeepCo</a>
           </Typography>
+          </div>
         </Toolbar>
       </AppBar>
         <div className="ovealli d-flex justify-content-between">
@@ -156,14 +180,14 @@ const NextPage = ({ goBackToHomePage  }) => {
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }}><Button id='six' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'seven' ? 'function' : ''}`} onClick={() => handleButtonClick('seven')} color='secondary' variant="text">
+                viewport={{ once: true }}><Button id='seven' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'seven' ? 'function' : ''}`} onClick={() => handleButtonClick('seven')} color='secondary' variant="text">
                 Image
               </Button></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }}><Button  color='secondary' variant="text">
-                Fast
+                viewport={{ once: true }}><Button id='eight' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'eight' ? 'function' : ''}`} onClick={() => handleButtonClick('eight')}  color='secondary' variant="text">
+                Effects
               </Button></motion.li>
             <motion.li variants={varianti}
                 initial="initial"
@@ -199,7 +223,7 @@ const NextPage = ({ goBackToHomePage  }) => {
         <h2 style={{marginTop:30}} className='d-flex justify-content-start' >Why choose us</h2>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>When we first launched we were the first one in the market to create such a website and company </p>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>so we got more experience in every aspect of this category</p>
-       
+       <div className="empty4"></div>
         </motion.div>
       )}
         <div className="hello2">
@@ -344,6 +368,22 @@ const NextPage = ({ goBackToHomePage  }) => {
          }}
           id='four' className='container-xxl' style={{color:'#ffffff'}}> 
          <Image/>
+          </motion.div>
+        )}
+        </div>
+        <div className="hello8">
+        {activeContent === 'eight' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Effects/>
           </motion.div>
         )}
         </div>

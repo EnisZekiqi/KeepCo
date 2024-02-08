@@ -55,7 +55,7 @@ function ResponsiveAppBar(props) {
   };
 
   return (
-    <AppBar position="fixed" className='glass' color='third'>
+    <AppBar  className='glass' color='five'>
       <Container maxWidth="xxl">
         <Toolbar disableGutters>
         <AllInclusiveIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color:'#3399ff'}} />
