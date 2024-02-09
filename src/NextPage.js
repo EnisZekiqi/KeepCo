@@ -106,6 +106,9 @@ const NextPage = ({ goBackToHomePage  }) => {
           </div>
         </Toolbar>
       </AppBar>
+      {showBackdrop && <div className="backdrop2" onClick={toggleDrawer}>
+        
+        </div>}
         <div className="ovealli d-flex justify-content-between">
         {showDrawer ? (
         <Drawer color='#101419' goBackToHomePage={goBackToHomePage} />

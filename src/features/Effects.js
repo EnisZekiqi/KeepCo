@@ -1,5 +1,6 @@
 import Edited from '../images/Edited.jpg'
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const shfaqe ={
     initial:{
@@ -17,6 +18,12 @@ const shfaqe ={
 }
 
 const Effects = () => {
+    const [isButtonClicked, setIsButtonClicked] = useState(null);
+
+    const handleButtonClick = (contentId) => {
+      setIsButtonClicked(contentId);
+    };
+
     return ( 
     <div>
         <div className="effecto">
@@ -28,7 +35,7 @@ const Effects = () => {
             <div style={{marginTop:30}} className="effektet">
                 <div className="d-flex justify-content-evenly">
                     <div className="d-flex flex-column">
-                        <button style={{border:'none', backgroundColor:'#101419'}}>
+                        <button id='first' className={`bw ${isButtonClicked === 'first' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('first')} style={{border:'none', backgroundColor:'#101419'}}>
                         <div className="d-flex">
                         <div className="image-container">
                             <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -36,7 +43,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >B&W Tones</p>
                         </div>
                         </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='second' className={`bw ${isButtonClicked === 'second' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('second')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container2">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -44,7 +51,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >Warmer Tones</p>
                             </div>
                             </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='third' className={`bw ${isButtonClicked === 'third' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('third')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container3">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -54,7 +61,7 @@ const Effects = () => {
                             </button>
                     </div>
                     <div className="d-flex flex-column">
-                    <button style={{border:'none', backgroundColor:'#101419'}}>
+                    <button id='four' className={`bw ${isButtonClicked === 'four' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('four')} style={{border:'none', backgroundColor:'#101419'}}>
                         <div className="d-flex">
                         <div className="image-container4">
                             <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -62,7 +69,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >Lens Flare</p>
                         </div>
                         </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='five' className={`bw ${isButtonClicked === 'five' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('five')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container5">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -70,7 +77,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >Old Photo</p>
                             </div>
                             </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='six' className={`bw ${isButtonClicked === 'six' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('six')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container6">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -80,7 +87,7 @@ const Effects = () => {
                             </button>
                     </div>
                     <div className="d-flex flex-column">
-                    <button style={{border:'none', backgroundColor:'#101419'}}>
+                    <button id='seven' className={`bw ${isButtonClicked === 'seven' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('seven')} style={{border:'none', backgroundColor:'#101419'}}>
                         <div className="d-flex">
                         <div className="image-container7">
                             <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -88,7 +95,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >Rainy Tones</p>
                         </div>
                         </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='eight' className={`bw ${isButtonClicked === 'eight' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('eight')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container8">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -96,7 +103,7 @@ const Effects = () => {
                             <p style={{color:'#ffffff'}} id='xx' className='text-center' >Old Photo2</p>
                             </div>
                             </button>
-                            <button  style={{border:'none', backgroundColor:'#101419'}}>
+                            <button id='nine' className={`bw ${isButtonClicked === 'nine' ? 'clicked3' : ''}`}  onClick={() => handleButtonClick('nine')} style={{border:'none', backgroundColor:'#101419'}}>
                             <div  className="d-flex">
                             <div className="image-container9">
                                 <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
@@ -107,7 +114,7 @@ const Effects = () => {
                     </div>
                 </div>
                 <div style={{marginTop:40}} className="effekti-image d-flex justify-content-center">
-                        <img style={{width:300}} src={Edited} alt="" />
+                        <img className={`btno ${isButtonClicked === 'first' ? 'color1' : ''} ${isButtonClicked === 'second' ? 'color2' : ''}${isButtonClicked === 'third' ? 'color3' : ''} ${isButtonClicked === 'four' ? 'color4' : ''} ${isButtonClicked === 'five' ? 'color5' : ''} ${isButtonClicked === 'six' ? 'color6' : ''} ${isButtonClicked === 'seven' ? 'color7' : ''} ${isButtonClicked === 'eight' ? 'color8' : ''} ${isButtonClicked === 'nine' ? 'color9' : ''}`} style={{width:300}} src={Edited} alt="" />
                     </div>
             </div>
         </div>
@@ -116,5 +123,4 @@ const Effects = () => {
     );
 }
  
-export default Effects;<div>
-</div>
+export default Effects;

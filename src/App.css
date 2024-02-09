@@ -80,6 +80,10 @@ margin-top: 2px;
   background-color: rgba(78, 78, 78, 0.548); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
 }
+.color1{
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
 
 .image-container2 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
@@ -95,6 +99,10 @@ margin-top: 2px;
   background-color: rgba(255, 102, 0, 0.349); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
 }
+.color2{
+  filter: brightness(120%) contrast(90%) saturate(120%) hue-rotate(20deg) opacity(0.75);
+  transition: 0.5s ease;
+}
 .image-container3 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
   display: inline-block; 
@@ -108,6 +116,10 @@ margin-top: 2px;
   height: 30px; /* Make the pseudo-element cover the entire container vertically */
   background-color: rgba(119, 0, 255, 0.349); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
+}
+.color3{
+   filter: brightness(120%) contrast(90%) saturate(120%) hue-rotate(40deg) opacity(0.75);
+   transition: 0.5s ease;
 }
 .image-container4 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
@@ -123,6 +135,10 @@ margin-top: 2px;
   background-color: rgba(255, 255, 153,0.4); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
 }
+.color4{
+  filter: brightness(110%) contrast(50%) saturate(100%)  opacity(0.8);
+  transition: 0.5s ease;
+}
 .image-container5 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
   display: inline-block; 
@@ -136,6 +152,10 @@ margin-top: 2px;
   height: 30px; /* Make the pseudo-element cover the entire container vertically */
   background-color: rgba(179, 89, 0,0.38); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
+}
+.color5{
+  filter: brightness(90%) contrast(110%) saturate(80%) hue-rotate(30deg) opacity(0.7);
+  transition: 0.5s ease;
 }
 .image-container6 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
@@ -151,6 +171,10 @@ margin-top: 2px;
   background-color: rgba(255, 0, 212, 0.349); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
 }
+.color6{
+  filter: brightness(110%) contrast(110%) saturate(100%) hue-rotate(60deg) opacity(0.8);
+  transition: 0.5s ease;
+}
 .image-container7 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
   display: inline-block; 
@@ -164,6 +188,10 @@ margin-top: 2px;
   height: 30px; /* Make the pseudo-element cover the entire container vertically */
   background-color: rgba(0, 102, 255,0.35); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
+}
+.color7{
+  filter: brightness(110%) contrast(100%) saturate(100%) hue-rotate(-30deg) opacity(0.8);
+  transition: 0.5s ease;
 }
 .image-container8 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
@@ -179,6 +207,10 @@ margin-top: 2px;
   background-color: rgba(136, 68, 1, 0.38); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
 }
+.color8{
+  filter: brightness(90%) contrast(130%) saturate(80%) hue-rotate(30deg) opacity(0.7);
+  transition: 0.5s ease;
+}
 .image-container9 {
   position: relative; /* Ensure the container is positioned relative to its containing element */
   display: inline-block; 
@@ -192,6 +224,10 @@ margin-top: 2px;
   height: 30px; /* Make the pseudo-element cover the entire container vertically */
   background-color: rgba(0, 255, 157, 0.149); /* Set the background color with transparency */
   z-index: 1; /* Ensure the pseudo-element is behind the image */
+}
+.color9{
+  filter: brightness(120%) contrast(90%) saturate(80%) hue-rotate(230deg) opacity(0.7);
+  transition: 0.5s ease;
 }
 @media(max-width:700px){
   .gg{
@@ -227,6 +263,24 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+.backdrop2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  z-index: 999;
+  pointer-events: none;
+  display:none;
+}
+@media(max-width:700px){
+  .backdrop2{
+     display: block;
+  }
+}
+
 
 .modal{
   width: clamp(50% ,700px ,90%);
@@ -1612,6 +1666,14 @@ a{
 }
 .clicked2{
  box-shadow: 0 8px 32px rgb(51, 153, 255,0.5)inset;;
+}
+.clicked3{
+  box-shadow: 5px -5px 5px 0px rgb(51,153,255,0.55);
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.bw{
+  width: fit-content;
 }
 .malware{
   width: 400px;
