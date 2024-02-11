@@ -22,6 +22,7 @@ import Protection from './features/Protection';
 import Edit from './features/Edit'
 import Image from './features/Image'
 import Effects from './features/Effects';
+import Graphics from './features/Graphics';
 const varianti={
     initial :{
         y:-20,
@@ -196,8 +197,8 @@ const NextPage = ({ goBackToHomePage  }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}>
-                    <Button  color='secondary' variant="text">
-                Fast
+                    <Button id='nine' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'nine' ? 'function' : ''}`} onClick={() => handleButtonClick('nine')}  color='secondary' variant="text">
+                Graphics
               </Button>
                 </motion.li>
               
@@ -387,6 +388,22 @@ const NextPage = ({ goBackToHomePage  }) => {
          }}
           id='four' className='container-xxl' style={{color:'#ffffff'}}> 
          <Effects/>
+          </motion.div>
+        )}
+        </div>
+        <div className="hello9">
+        {activeContent === 'nine' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Graphics/>
           </motion.div>
         )}
         </div>
