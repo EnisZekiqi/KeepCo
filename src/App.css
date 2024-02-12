@@ -1250,8 +1250,17 @@ margin-top: 20px;
   border: 0.5px solid #bbbbbb;
   border-radius: 10px;
   width: 600px;
-  height: 600px;
+  height: 625px;
   background-color: rgba(10, 12, 16,0.7);
+}
+.modal-icon-overlay{
+ margin-top: -50px;
+}
+.icon-wrapper2{
+  margin-top: 25px;
+}
+.modal-image-container{
+  margin-bottom: 10px;
 }
 .melogo{
   border: 2px solid #bbbbbb;
@@ -1297,9 +1306,12 @@ margin-top: 20px;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ 
 }
+
   .modal-content {
     text-align: center;
+    
   }
   
 
