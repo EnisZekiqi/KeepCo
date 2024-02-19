@@ -24,6 +24,7 @@ import Image from './features/Image'
 import Effects from './features/Effects';
 import Graphics from './features/Graphics';
 import Transfer from './features/Transfer'
+import Drag from './features/Drag';
 
 const varianti={
     initial :{
@@ -443,6 +444,22 @@ const NextPage = ({ goBackToHomePage  }) => {
          }}
           id='four' className='container-xxl' style={{color:'#ffffff'}}> 
          <Transfer/>
+          </motion.div>
+        )}
+        </div>
+        <div className="hello11">
+        {activeContent === 'eleven' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Drag/>
           </motion.div>
         )}
         </div>

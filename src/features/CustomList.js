@@ -10,9 +10,19 @@ import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 
-function not(a, b) {
+const not = (a, b) => {
   return a.filter((value) => b.indexOf(value) === -1);
-}
+};
+
+const features = [
+  'Text',
+  'Image',
+  'Effects',
+  'Graphics',
+  'Fast',
+  'Secure',
+  'Protection',
+];
 
 function intersection(a, b) {
   return a.filter((value) => b.indexOf(value) !== -1);
@@ -24,8 +34,8 @@ function union(a, b) {
 
 export default function SelectAllTransferList() {
   const [checked, setChecked] = React.useState([]);
-  const [left, setLeft] = React.useState([0, 1, 2, 3]);
-  const [right, setRight] = React.useState([4, 5, 6, 7]);
+  const [left, setLeft] = React.useState(features.slice(0, 4));
+  const [right, setRight] = React.useState(features.slice(4, 7));
 
   const leftChecked = intersection(checked, left);
   const rightChecked = intersection(checked, right);
@@ -65,17 +75,17 @@ export default function SelectAllTransferList() {
     setChecked(not(checked, rightChecked));
   };
 
-  const CustomList = (title, items) => (
-    <Card style={{backgroundColor:'#101419',color:'#ffffff'}}>
+  const CustomList = (title, items, checkedItems, onToggleAll, onToggle) => (
+    <Card style={{ backgroundColor: '#101419', color: '#ffffff' }}>
       <CardHeader
         sx={{ px: 2, py: 1 }}
         avatar={
           <Checkbox
-          style={{color:'#3399ff'}}
-            onClick={handleToggleAll(items)}
-            checked={numberOfChecked(items) === items.length && items.length !== 0}
+            style={{ color: '#3399ff' }}
+            onClick={onToggleAll}
+            checked={checkedItems.length === items.length && items.length !== 0}
             indeterminate={
-              numberOfChecked(items) !== items.length && numberOfChecked(items) !== 0
+              checkedItems.length !== items.length && checkedItems.length !== 0
             }
             disabled={items.length === 0}
             inputProps={{
@@ -84,7 +94,7 @@ export default function SelectAllTransferList() {
           />
         }
         title={title}
-        subheader={`${numberOfChecked(items)}/${items.length} selected`}
+        subheader={`${checkedItems.length}/${items.length} selected`}
       />
       <Divider />
       <List
@@ -92,8 +102,8 @@ export default function SelectAllTransferList() {
           width: 200,
           height: 230,
           bgcolor: 'forth',
-          border:'1px solid #bbbbbb',
-          borderRadius:'10px',
+          border: '1px solid #bbbbbb',
+          borderRadius: '10px',
           overflow: 'auto',
         }}
         dense
@@ -107,11 +117,11 @@ export default function SelectAllTransferList() {
             <ListItemButton
               key={value}
               role="listitem"
-              onClick={handleToggle(value)}
+              onClick={onToggle(value)}
             >
               <ListItemIcon>
                 <Checkbox
-                style={{color:'#3399ff'}}
+                  style={{ color: '#3399ff' }}
                   checked={checked.indexOf(value) !== -1}
                   tabIndex={-1}
                   disableRipple
@@ -120,7 +130,7 @@ export default function SelectAllTransferList() {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`List item ${value + 1}`} />
+              <ListItemText id={labelId} primary={value} />
             </ListItemButton>
           );
         })}
@@ -130,7 +140,15 @@ export default function SelectAllTransferList() {
 
   return (
     <Grid container spacing={2} justifyContent="center" alignItems="center">
-      <Grid item>{CustomList('Choices', left)}</Grid>
+      <Grid item>
+        {CustomList(
+          'Choices',
+          left,
+          leftChecked,
+          handleToggleAll(left),
+          handleToggle
+        )}
+      </Grid>
       <Grid item>
         <Grid container direction="column" alignItems="center">
           <Button
@@ -155,7 +173,15 @@ export default function SelectAllTransferList() {
           </Button>
         </Grid>
       </Grid>
-      <Grid item>{CustomList('Chosen', right)}</Grid>
+      <Grid item>
+        {CustomList(
+          'Chosen',
+          right,
+          rightChecked,
+          handleToggleAll(right),
+          handleToggle
+        )}
+      </Grid>
     </Grid>
   );
 }
