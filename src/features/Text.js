@@ -15,7 +15,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from '@mui/material/ToggleButtonGroup';
-import {motion,useAnimate} from 'framer-motion';
+import {useAnimate} from 'framer-motion';
 import { useState } from 'react';
 import Tooltip from '@mui/material/Tooltip';
 

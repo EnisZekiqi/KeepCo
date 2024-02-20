@@ -2572,13 +2572,11 @@ border-radius: 10px;
   border-radius:0px 10px 10px 0px ;
 }
 .emojiii{
-  position: absolute;
+ 
   opacity: 1;
   width: 125px;
-  height: 280px;
-  background-color: rgba(10, 12, 16,0.7);
-  border-radius:0px 10px 10px 0px ;
   overflow-y: auto;
+  background-color: rgba(10, 12, 16,0.7);
 }
 
 .emojiii::-webkit-scrollbar {
@@ -2590,8 +2588,26 @@ border-radius: 10px;
   border: 1px solid transparent;
   
 }
-.emojiii::-webkit-scrollbar-track {
+.ynreqi::-webkit-scrollbar-track {
   background-color: #101419; /* Set the color of the scrollbar track */
+}
+.yndreqi::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+.yndreqi::-webkit-scrollbar-thumb {
+  background-color: #28323e; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+  border: 1px solid transparent;
+  
+}
+.yndreqi::-webkit-scrollbar-track {
+  background-color: #101419; /* Set the color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #28323e; /* Set the background color */
+  border-radius: 6px; /* Set the border radius */
+  width: 5px; /* Set the width of the scrollbar thumb */
 }
 
 .texticon{

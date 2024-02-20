@@ -34,6 +34,12 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import RainyTones from "./ordereffect/RainyTones";
+import HolgaArt from "./ordereffect/HolgaArt";
+import OldPhoto from "./ordereffect/OldPhoto";
+import ClrPinhole from "./ordereffect/ClrPinhole";
+import BW from "./ordereffect/BW";
+import { Mosque, Tsunami } from "@mui/icons-material";
 
 const shfaqe ={
     initial:{
@@ -61,10 +67,7 @@ const qelu = {
 const Drag = () => {
 
     const [scope,animate] =useAnimate();
-    const [scope2,animate2] =useAnimate();
-    const [scope3,animate3] =useAnimate();
-    const [scope4,animate4] =useAnimate();
-    const [scope5,animate5] =useAnimate();
+  
 
 
     const [IsButtonClicked,setIsButtonClicked]=useState("first");
@@ -76,15 +79,34 @@ const Drag = () => {
       };
 
       const [iconOrder, setIconOrder] = useState(['Brightness', 'Exposure', 'Contrast', 'Blur', 'Box-shadow']);
-
+      const [iconOrder2, setIconOrder2] = useState(['Start', 'Center', 'End', 'Color', 'Font']);
+      const [iconOrder3,setIconOrder3] = useState (['Crop', 'Rotate Right', 'Rotate Left', 'Aspect Ratio','AutoFix'])
+      const [iconOrder4,setIconOrder4] = useState (['Rainy Tones', 'Old Photos', 'Clr Pinhole', 'Holga Art','B&W'])
+      const [iconOrder5,setIconOrder5] = useState (['Bolt', 'Sun', 'Cloud', 'Cyclone','Headset','Mosque','Fitness','Rocket','Tsunami','Key','Thunder'])
       const onDragEnd = (result) => {
         if (!result.destination) return;
     
         const newOrder = Array.from(iconOrder);
+        const newOrder2 = Array.from(iconOrder2);
+        const newOrder3 = Array.from(iconOrder3);
+        const newOrder4 = Array.from(iconOrder4);
+        const newOrder5 = Array.from(iconOrder5);
         const [reorderedItem] = newOrder.splice(result.source.index, 1);
+        const [reorderedItem2] = newOrder2.splice(result.source.index, 1);
+        const [reorderedItem3] = newOrder3.splice(result.source.index, 1);
+        const [reorderedItem4] = newOrder4.splice(result.source.index, 1);
+        const [reorderedItem5] = newOrder5.splice(result.source.index, 1);
         newOrder.splice(result.destination.index, 0, reorderedItem);
-    
+        newOrder2.splice(result.destination.index, 0, reorderedItem2);
+        newOrder3.splice(result.destination.index, 0, reorderedItem3);
+        newOrder4.splice(result.destination.index, 0, reorderedItem4);
+        newOrder5.splice(result.destination.index, 0, reorderedItem5);
+
         setIconOrder(newOrder);
+        setIconOrder2(newOrder2);
+        setIconOrder3(newOrder3);
+        setIconOrder4(newOrder4);
+        setIconOrder5(newOrder5);
       };
 
     const constraintsRef = useRef(null);
@@ -187,144 +209,166 @@ const Drag = () => {
           )}
         </Droppable>
       )}
-      {/* Add other Droppable components for other activeButtons if needed */}
+      {activeButton === "second" && (
+                          <Droppable droppableId="droppable-2">
+                          {(provided) => (
+                            <div ref={provided.innerRef} {...provided.droppableProps}>
+                              {iconOrder2.map((iconId, index) => (
+                                <Draggable key={iconId} draggableId={iconId} index={index}>
+                                  {(provided) => (
+                                    <div style={{width:'fitContent',height:'fitContent'}}
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      <motion.div
+                                        variants={qelu}
+                                        initial="initial"
+                                        animate="animate"
+                                        className="essenciall d-flex flex-column"
+                                      >
+                                        <div style={{ marginTop: 20 }} className="d-flex justify-content-center mt-8">
+                                          {iconId === 'Start' && <FormatAlignLeftIcon style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Center' && <FormatAlignCenterIcon style={{ color: '#3399ff' }} />}
+                                          {iconId === 'End' && <FormatAlignRightIcon style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Color' && <FormatColorFillIcon style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Font' && <FormatItalicIcon style={{ color: '#3399ff' }} />}
+                                          <p style={{ marginLeft: 2 }}>{iconId}</p>
+                                        </div>
+                                      </motion.div>
+                                    </div>
+                                  )}
+                                </Draggable>
+                              ))}
+                              {provided.placeholder}
+                            </div>
+                          )}
+                        </Droppable>
+                        )}
+                         {activeButton === "third" && (
+                           <Droppable droppableId="droppable-3">
+                           {(provided) => (
+                             <div ref={provided.innerRef} {...provided.droppableProps}>
+                               {iconOrder3.map((iconId, index) => (
+                                 <Draggable key={iconId} draggableId={iconId} index={index}>
+                                   {(provided) => (
+                                     <div style={{width:'fitContent',height:'fitContent'}}
+                                       ref={provided.innerRef}
+                                       {...provided.draggableProps}
+                                       {...provided.dragHandleProps}
+                                     >
+                                       <motion.div
+                                         variants={qelu}
+                                         initial="initial"
+                                         animate="animate"
+                                         className="essenciall d-flex flex-column"
+                                       >
+                                         <div style={{ marginTop: 20 }} className="d-flex justify-content-center mt-8">
+                                           {iconId === 'Crop' && <CropIcon style={{ color: '#3399ff' }} />}
+                                           {iconId === 'Rotate Right' && <RotateRightIcon style={{ color: '#3399ff' }} />}
+                                           {iconId === 'Rotate Left' && <RotateLeftIcon style={{ color: '#3399ff' }} />}
+                                           {iconId === 'Aspect Ratio' && <AspectRatioIcon style={{ color: '#3399ff' }} />}
+                                           {iconId === 'AutoFix' && <AutoFixHighIcon style={{ color: '#3399ff' }} />}
+                                           <p style={{ marginLeft: 2 }}>{iconId}</p>
+                                         </div>
+                                       </motion.div>
+                                     </div>
+                                   )}
+                                 </Draggable>
+                               ))}
+                               {provided.placeholder}
+                             </div>
+                           )}
+                         </Droppable>
+                        )}
+                        {activeButton === "four" && (
+                          <Droppable droppableId="droppable-4">
+                          {(provided) => (
+                            <div ref={provided.innerRef} {...provided.droppableProps}>
+                              {iconOrder4.map((iconId, index) => (
+                                <Draggable key={iconId} draggableId={iconId} index={index}>
+                                  {(provided) => (
+                                    <div style={{width:'fitContent',height:'fitContent'}}
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      <motion.div
+                                        variants={qelu}
+                                        initial="initial"
+                                        animate="animate"
+                                        className="essenciall d-flex flex-column"
+                                      >
+                                        <div style={{ marginTop: 20 }} className="d-flex justify-content-center mt-8">
+                                          {iconId === 'Rainy Tones' && <RainyTones style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Holga Art' && <HolgaArt style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Old Photos' && <OldPhoto style={{ color: '#3399ff' }} />}
+                                          {iconId === 'Clr Pinhole' && <ClrPinhole style={{ color: '#3399ff' }} />}
+                                          {iconId === 'B&W' && <BW style={{ color: '#3399ff' }} />}
+                                          <p style={{ marginLeft: 2 }}>{iconId}</p>
+                                        </div>
+                                      </motion.div>
+                                    </div>
+                                  )}
+                                </Draggable>
+                              ))}
+                              {provided.placeholder}
+                            </div>
+                          )}
+                        </Droppable>
+                        )}
+                               <div>
+        {activeButton === "five" && (
+          <Droppable droppableId="droppable-4">
+            {(provided) => (
+              <div
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+                className="emojiii d-flex flex-column"
+              >
+                <div className="yndeqi" style={{ height: '300px', overflowY: 'auto' }}>
+                  {iconOrder5.map((iconId, index) => (
+                    <Draggable key={iconId} draggableId={iconId} index={index}>
+                      {(provided) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          <motion.div
+                            variants={qelu}
+                            initial="initial"
+                            animate="animate"
+                          >
+                            <div style={{ marginTop: 20 }} className="d-flex justify-content-center mt-8">
+                              {iconId === 'Bolt' && <BoltIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Sun' && <BrightnessHighIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Cloud' && <CloudIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Cyclone' && <CycloneIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Headset' && <HeadsetIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Mosque' && <MosqueIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Fitness' && <FitnessCenterIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Rocket' && <RocketLaunchIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Tsunami' && <TsunamiIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Key' && <VpnKeyIcon style={{ color: '#3399ff' }} />}
+                              {iconId === 'Thunder' && <ThunderstormIcon style={{ color: '#3399ff' }} />}
+                              <p style={{ marginLeft: 2 }}>{iconId}</p>
+                            </div>
+                          </motion.div>
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </div>
+              </div>
+            )}
+          </Droppable>
+        )}
+      </div>
+
     </DragDropContext>
-                      {activeButton === "second" && (
-                         <motion.div
-                         variants={qelu}
-                         initial="initial"
-                         animate="animate"
-                         className="texori d-flex flex-column">
-                            <div style={{marginTop:20}} className="d-flex justify-content-center mt-8">
-                        <FormatAlignLeftIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Start</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <FormatAlignCenterIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Center</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <FormatAlignRightIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>End</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <FormatColorFillIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Color </p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <FormatItalicIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Font</p>
-                      </div>
-                        </motion.div>
-                        )}
-                     {activeButton === "third" && (
-                         <motion.div 
-                         variants={qelu}
-                         initial="initial"
-                         animate="animate"
-                         className="maskoff">
-                             <div style={{marginTop:20}} className="d-flex justify-content-center mt-8">
-                        <CropIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Crop</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <RotateRightIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Rotate Right</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <RotateLeftIcon  style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Rotate Left</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <AspectRatioIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>Aspect Ratio</p>
-                      </div>
-                      <div style={{marginTop:10}} className="d-flex justify-content-center mt-8">
-                        <AutoFixHighIcon style={{color:'#3399ff'}}/>
-                        <p style={{marginLeft:2}}>AutoFix</p>
-                      </div>
-                        </motion.div>
-                        )}
-                     {activeButton === "four" && (
-                         <motion.div 
-                         variants={qelu}
-                         initial="initial"
-                         animate="animate"
-                         className="collori">
-                          <div style={{marginTop:15}} className="image-container7 d-flex">
-                            <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
-                            <p style={{fontSize:12,marginTop:5}}>Rainy Tones</p>
-                          </div>
-                          <div style={{marginTop:15}} className="image-container8  d-flex">
-                                <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
-                                <p style={{fontSize:12,marginTop:5}}>Old Photos</p>
-                            </div>
-                          <div style={{marginTop:15}} className="image-container9  d-flex">
-                            <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
-                            <p style={{fontSize:12,marginTop:5}}>Clr Pinhole</p>
-                         </div>
-                         <div style={{marginTop:15}} className="image-container6  d-flex">
-                            <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
-                            <p style={{fontSize:12,marginTop:5}}>Rainy Tones</p>
-                         </div>
-                         <div style={{marginTop:15}} className="image-container4  d-flex">
-                            <img id='blackwhite' style={{ width: 30, height: 30, marginRight: 5 }} src={Edited} alt="" />
-                            <p style={{fontSize:12,marginTop:5}}>Rainy Tones</p>
-                         </div>
-                        </motion.div>
-                        )}
-                    {activeButton === "five" && (
-                         <motion.div 
-                         variants={qelu}
-                         initial="initial"
-                         animate="animate"
-                         className="emojiii">
-                            <div style={{marginTop:17}} className="d-flex  justify-content-center">
-                              <BoltIcon/> 
-                              <p>Bolt</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                              <BrightnessHighIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Sun</p>
-                            </div>
-                            <div className="d-flex  justify-content-center ">
-                              <CloudIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Cloud</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                              <CycloneIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Cyclone</p>
-                            </div>
-                            <div className="d-flex justify-content-center ">
-                              <HeadsetIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Headset</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                                <MosqueIcon/>
-                                <p style={{marginLeft:2,fontSize:14}}>Mosque</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                              <FitnessCenterIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Fitness</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                              <RocketLaunchIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Rocket</p>
-                            </div>
-                            <div className="d-flex  justify-content-center">
-                              <TsunamiIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Tsunami</p>
-                            </div>
-                            <div className="d-flex justify-content-center">
-                              <VpnKeyIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Key</p>
-                            </div>
-                            <div className="d-flex justify-content-center">
-                              <ThunderstormIcon/>
-                              <p style={{marginLeft:2,fontSize:14}}>Thunder</p>
-                            </div>
-                        </motion.div>
-                        )}
+                    
                 </div>
             </div>
             <div className="empty4"></div>
