@@ -1163,12 +1163,22 @@ margin-right: 0;
    justify-content: center;
    align-items: center;
   }
-
+  
 }
 .homi{
- background:url(images/Shiny\ Overlay.svg);
+ background:url(images/magicpatterngradient.png);
+ background-repeat: no-repeat;
+ background-size: 100%;
 border-radius: 10px;
 }
+@media(max-width:1020px){
+ 
+  .homi{
+ background-size: auto;
+  }
+
+}
+
 .logoja{
  position: absolute;
  background-color: #101418;
@@ -1796,13 +1806,21 @@ a{
 @media (max-width: 768px) {
   .malware{
     border-right: 0px;
-    border-bottom: 1px solid #3399ff;
+    
   }
   .spam{
     border-right: 0px;
   }
   .future-attack{
     border-left: 0px;
+  }
+  .spam{
+    border-top: 0px;
+    padding-left: 0px;
+  }
+  .future-attack{
+    border-top: 0px;
+    padding-left: 0px;
   }
 }
 @media (max-width: 768px) {
@@ -2415,6 +2433,11 @@ margin-left: -10px;
   color: #3399ff;
   font-weight: 500;
 }
+.boldd{
+  color:	rgb(102, 179, 255);
+  box-shadow: #3399ff inset;
+  font-weight: 500;
+}
 .bold2{
   color: #ffffff;
   font-weight: 500;
@@ -2579,14 +2602,50 @@ border-radius: 10px;
   background-color: rgba(10, 12, 16,0.7);
 }
 
-.emojiii::-webkit-scrollbar {
-  width: 5px; /* Set the width of the scrollbar */
+.yndreqi{
+  overflow-y: auto;
 }
-.emojiii::-webkit-scrollbar-thumb {
-  background-color: #28323e; /* Set the color of the scrollbar thumb */
-  border-radius: 6px; /* Set the border radius of the thumb */
-  border: 1px solid transparent;
-  
+.rapture{
+  width: 500px;
+  height: 300px;
+  background: rgba( 10, 12, 16, 0.25 );
+  background-image: url(images/blob-haikei.svg);
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: 50% 50%;
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 0px 10px 10px 0px;
+}
+.blob{
+  background-image: url(images/blob-haikei.svg);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.jpg1{
+  transform: rotate(-22deg);
+}
+.png1{
+  margin-left: 10px;
+  margin-top: -10px;
+}
+.svg1{
+transform: rotate(22deg);
+margin-left: 10px;
+margin-top: -2px;
+}
+.cd{
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #3399ff;
+  height: 20px;
+  border-right: 2px solid #3399ff;
 }
 .ynreqi::-webkit-scrollbar-track {
   background-color: #101419; /* Set the color of the scrollbar track */

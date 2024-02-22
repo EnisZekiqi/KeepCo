@@ -60,7 +60,7 @@ animate={{ opacity:1 }}
 transition={{
   duration:2
 }}
-style={{color:'#ffffff',fontSize:100}}>Keep<bold className='bold'>Co</bold></motion.h1>
+style={{color:'#ffffff',fontSize:100}}>Keep<bold className='boldd'>Co</bold></motion.h1>
     <div className="second-text text-center d-flex flex-column">
       <motion.p initial={{ opacity: 0 }}
   animate={{ opacity:1 }}
