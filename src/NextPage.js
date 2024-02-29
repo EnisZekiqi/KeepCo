@@ -25,6 +25,7 @@ import Effects from './features/Effects';
 import Graphics from './features/Graphics';
 import Transfer from './features/Transfer'
 import Drag from './features/Drag';
+import Staff from './features/Staff';
 
 const varianti={
     initial :{
@@ -226,6 +227,28 @@ const NextPage = ({ goBackToHomePage  }) => {
                 Drag 
               </Button>
                 </motion.li>
+                <motion.li
+              variants={varianti}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              ><h5 style={{color:'#3399ff',marginTop:10,marginBottom:10}}>Services</h5></motion.li>
+               <motion.li variants={varianti}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}>
+                    <Button id='twelve' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'twelve' ? 'function' : ''}`} onClick={() => handleButtonClick('twelve')}  color='secondary' variant="text">
+                Staff
+              </Button>
+                </motion.li>
+                <motion.li variants={varianti}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}>
+                    <Button id='thirteen' style={{marginBottom:10}} className={`btn2 ${isButtonClicked === 'thirteen' ? 'function' : ''}`} onClick={() => handleButtonClick('thirteen')}  color='secondary' variant="text">
+                Career
+              </Button>
+                </motion.li>
         </ul>
             </div>
     </div>
@@ -251,7 +274,7 @@ const NextPage = ({ goBackToHomePage  }) => {
         <h2 style={{marginTop:30}} className='d-flex justify-content-start' >Why choose us</h2>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>When we first launched we were the first one in the market to create such a website and company </p>
         <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>so we got more experience in every aspect of this category</p>
-       <div className="empty4"></div>
+      
         </motion.div>
       )}
         <div className="hello2">
@@ -460,6 +483,22 @@ const NextPage = ({ goBackToHomePage  }) => {
          }}
           id='four' className='container-xxl' style={{color:'#ffffff'}}> 
          <Drag/>
+          </motion.div>
+        )}
+        </div>
+        <div className="hello12">
+        {activeContent === 'twelve' && (
+          <motion.div
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+         transition={{
+         type: "spring",
+         stiffness: 300,
+         damping: 30,
+         duration:2
+         }}
+          id='four' className='container-xxl' style={{color:'#ffffff'}}> 
+         <Staff/>
           </motion.div>
         )}
         </div>

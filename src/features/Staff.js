@@ -1,0 +1,255 @@
+import { motion,useAnimate } from "framer-motion";
+import Button from '@mui/material/Button';
+import { useState } from "react";
+import ustahikinez from '../images/ustahikinez.jpg'
+import ustahibrazil from '../images/ustahibrazil.jpg'
+import Checkbox from '@mui/material/Checkbox';
+
+
+const Staff = () => {
+
+    const [isButtonClicked, setIsButtonClicked] = useState(null);
+
+    const [scope,animate] =useAnimate();
+    const [show,animato]=useAnimate();
+    const[dont,animato1]=useAnimate();
+    const[dont1,animato2]=useAnimate();
+    const[scope1,animate1]=useAnimate();
+    const [scope2,animate2] =useAnimate();
+    const [hiqmu,animeqo] =useAnimate();
+
+
+    const showmore = async (contentId) =>{
+        animate(scope.current,{x:0});
+        animate1(scope1.current,{opacity:1 ,visibility:'visible',display:''});
+        animate2(scope2.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        animato1(dont.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        setIsButtonClicked(contentId);
+        setTimeout(() => {
+          
+        }, 3000); 
+       
+        
+    }
+    const showmore2 = async (contentId) =>{
+        animate2(scope2.current,{x:0});
+        animate(scope.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        animato1(dont.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        animato2(dont1.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        animeqo(hiqmu.current,{opacity:0 ,visibility:'hidden',display:'none'});
+        setIsButtonClicked(contentId);
+        setTimeout(() => {
+          
+        }, 3000); 
+       
+        
+    }
+    
+
+    const hidemore = async (contentId) =>{
+        animate(scope.current,{x:0,opacity:1, visibility: 'visible', display: 'block'});
+        animeqo(hiqmu.current,{opacity:1, visibility: 'visible', display: 'block'});
+        animate1(scope1.current,{opacity:1 ,visibility:'visible',display:''});
+        animate2(scope2.current,{opacity:1 ,visibility:'visible',display:''});
+        animato1(dont.current,{opacity:1 ,visibility:'visible',display:''});
+        animato2(dont1.current,{opacity:1 ,visibility:'visible',display:''});
+        animate2(scope2.current,{x:0});
+        setIsButtonClicked(contentId);
+
+    }
+
+
+    const [showProgrammer, setShowProgrammer] = useState(true);
+    const [showDesigner, setShowDesigner] = useState(true);
+    const [showMarketing, setShowMarketing] = useState(true);
+    const [showService, setShowService] = useState(true);
+
+    const handleCheckboxChange = (event) => {
+      const { name, checked } = event.target;
+      switch (name) {
+        case 'programmer':
+          setShowProgrammer(checked);
+          break;
+        case 'designer':
+          setShowDesigner(checked);
+          break;
+        case 'marketing':
+          setShowMarketing(checked);
+          break;
+        case 'service':
+          setShowService(checked);
+          break;
+        default:
+          break;
+      }
+    };
+  
+
+
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+    return ( 
+
+        <div>
+            <h1>Staff</h1>
+            <p className='d-flex justify-content-start' style={{color:'#bbbbbb'}}>Check all of our staff here</p>
+            <h2 style={{marginTop:50,marginBottom:80}} className="text-center">Meet our Founders</h2>
+            <div style={{marginTop:30}} className="founderat ">
+                <div style={{marginLeft:30}} className={`row ${isButtonClicked === 'first' ? 'center' : ''} ${isButtonClicked === 'third' ? 'center' : ''}${isButtonClicked === 'second' ? 'center2' : ''}`}>
+               
+                    <div ref={scope}  className="col-lg-6 mb-4 mb-lg-0">
+                    <div ref={hiqmu} className={`founderi1 ${isButtonClicked === 'first' ? 'clicked6' : ''} ${isButtonClicked === 'second' ? 'clicked7' : ''}${isButtonClicked === 'third' ? 'clickedn' : ''}`}>
+                    <motion.div 
+                    
+                    whileHover={{ scale: 1.1,   transition:{
+                       type: "spring",
+                       stiffness: 200,
+                       damping: 20
+                     } }}
+                     className={`photofounderi1 ${isButtonClicked === 'first' ? 'photofounderi3' : ''} ${isButtonClicked === 'second' ? 'photofounderi1' : ''}`}>
+                      <img  className={`ustahi ${isButtonClicked === 'first' ? 'ustahi2' : ''} ${isButtonClicked === 'second' ? 'ustahi' : ''}`} src={ustahibrazil} alt="" />
+                     </motion.div>
+                    <h3  className={`text-center ${isButtonClicked === 'first' ? 'clicked5' : ''} ${isButtonClicked === 'second' ? 'clicked5x' : ''}`} style={{marginTop:-60}}>Enis Zekiqi</h3>
+                    <h5 className="text-center" style={{marginTop:0}}>CEO and Co-Founder </h5>
+                      <div className={`text-ceo2 ${isButtonClicked === 'first' ? 'clicked5xx' : ''} ${isButtonClicked === 'second' ? 'clicked5x' : ''}`} >
+                        <p>Enis finished his studies in Computer Science and Technology in UBT Prishtina.</p>
+                        <Button ref={dont}   id="first" onClick={()=>showmore('first')} style={{marginLeft:100,marginBottom:20}} className="xcx" variant="contained" color="five">Show More</Button>
+                      </div>
+                      <div ref={show} className={`expandable ${isButtonClicked === 'first' ? 'clicked52' : ''} ${isButtonClicked === 'second' ? 'clicked53' : ''}`}>
+                        <div className="teksticeo">
+                        <p>He has 4 years of experience of Front-End developer and he extended expertise in multiple technologies such as large-scale network technologies and software developing </p>
+                        <p>After a long time of working he started to build the company KeepCo and is still working to open more companies in future </p>
+                        </div>
+                        <Button ref={scope1} id="second" onClick={()=>hidemore('second')} style={{marginLeft:110,marginBottom:20}} className="xcx" variant="contained" color="five">Show Less</Button>
+                     </div>
+                    </div>
+                    </div>
+                    <div className="col-lg-6">
+                    <div ref={scope2}  className={`founderi2 ${isButtonClicked === 'third' ? 'kk0' : ''} ${isButtonClicked === 'second' ? '' : ''}`}>
+                    <motion.div
+                     whileHover={{ scale: 1.1,   transition:{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 20
+                      } }}
+                      className={`photofounderi1 ${isButtonClicked === 'third' ? 'photofounderi3' : ''} ${isButtonClicked === 'second' ? 'photofounderi1' : ''}`}>
+                        <img  className={`ustahi ${isButtonClicked === 'third' ? 'ustahi2' : ''} ${isButtonClicked === 'second' ? 'ustahi' : ''}`} src={ustahikinez} alt="" />
+                      </motion.div>
+                    <h3  className={`text-center ${isButtonClicked === 'first' ? 'clicked5' : ''} ${isButtonClicked === 'second' ? 'clicked5x' : ''}`} style={{marginTop:-60}}>Ardian Krasniqi</h3>
+                    <h5 className="text-center" style={{marginTop:0}}>CEO and Co-Founder </h5>
+                      <div className={`text-ceo2 ${isButtonClicked === 'third' ? 'clicked5xxx' : ''} ${isButtonClicked === 'second' ? 'clicked5x' : ''}`} >
+                        <p>Ardian finished his studies in Computer Science and Designer Graphic in UBT Prishtina.</p>
+                        <Button ref={dont1} onClick={()=>showmore2('third')}  style={{marginLeft:100,marginBottom:20}} className="d-flex justify-content-center align-center" variant="contained" color="five">Show More</Button>
+                      </div>
+                      <div ref={show}  className={`expandable ${isButtonClicked === 'third' ? 'clicked52' : ''} ${isButtonClicked === 'second' ? 'clicked53' : ''}`}>
+                        <div className="teksticeo">
+                        <p>Ardian started as a front-end developer but he found himself in designer graphic more than programming , together </p>
+                        <p>with Enis they learned together and achived all the glory together and in the present they run the company called KeepCo </p>
+                        </div>
+                        <Button  id="second" onClick={()=>hidemore('second')} style={{marginLeft:110,marginBottom:20}} className="xcx" variant="contained" color="five">Show Less</Button>
+                     </div>
+                    </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <h2 style={{marginTop:80,marginBottom:80}} className="text-center">Meet our Team</h2>
+            <div className="team">
+      <div className="row">
+        <div className="col">
+          <div style={{ width: '100%', backgroundColor: 'rgba(10, 12, 16,0.7)', borderRadius: '10px' }} className="d-flex justify-content-evenly mb-3 mb-md-0">
+            <div className="d-flex">
+              <Checkbox name="programmer" checked={showProgrammer} onChange={handleCheckboxChange} style={{ color: '#3399ff' }} />
+              <p style={{ color: '#bbbbbb', marginTop: 10 }}>Programmer</p>
+            </div>
+            <div className="d-flex">
+              <Checkbox name="designer" checked={showDesigner} onChange={handleCheckboxChange} style={{ color: '#3399ff' }} />
+              <p style={{ color: '#bbbbbb', marginTop: 10 }}>Designer</p>
+            </div>
+            <div className="d-flex">
+              <Checkbox name="marketing" checked={showMarketing} onChange={handleCheckboxChange} style={{ color: '#3399ff' }} />
+              <p style={{ color: '#bbbbbb', marginTop: 10 }}>Marketing</p>
+            </div>
+            <div className="d-flex">
+              <Checkbox name="service" checked={showService} onChange={handleCheckboxChange} style={{ color: '#3399ff' }} />
+              <p style={{ color: '#bbbbbb', marginTop: 10 }}>Service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="">
+        <div id="topofdrill" >
+          <div className="d-flex flex-column">
+            {/* Display marketi1 items based on checkbox state */}
+            <div className="d-flex flex-wrap justify-content-evenly">
+              {/* Display marketi1 items for Programmer */}
+              {showProgrammer && (
+                <>
+                  <div style={{ marginTop:20,marginBottom: 10 }} className="marketi1">
+                    1
+                  </div>
+                  <div style={{marginTop:20 ,marginBottom: 10 }} className="marketi1">
+                    2
+                  </div>
+                  <div style={{marginTop:20  ,marginBottom: 10 }} className="marketi1">
+                    3
+                  </div>
+                </>
+              )}
+              {/* Repeat similar logic for other categories */}
+              {/* Display marketi1 items for Designer */}
+              {showDesigner && (
+                <>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    1
+                  </div>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    2
+                  </div>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    3
+                  </div>
+                </>
+              )}
+              {/* Display marketi1 items for Marketing */}
+              {showMarketing && (
+                <>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    1
+                  </div>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    2
+                  </div>
+                  <div style={{ marginBottom: 10 }} className="marketi1">
+                    3
+                  </div>
+                </>
+              )}
+              {/* Display marketi1 items for Service */}
+              {showService && (
+                <>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    1
+                  </div>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    2
+                  </div>
+                  <div style={{  marginBottom: 10 }} className="marketi1">
+                    3
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+            <div className="empty4"></div>
+            <div className="empty4"></div>
+        </div>
+     );
+}
+ 
+export default Staff;
