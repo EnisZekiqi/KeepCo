@@ -1549,10 +1549,32 @@ margin-top: 40px;
   border-radius: 10px;
   background-color: #28323e;
   width: 350px;
-  height: 200px;
- 
+  height: 220px;
+ transition: 0.2s ease;
 }
+.marketi2{
+opacity: 0;
+display: none;
+}
+.marketi3{
+ opacity: 1;
+ display: block;
 
+}
+.marketextend{
+  opacity: 0;
+  display: none;
+  transition:opacity 0.2s ease;
+}
+.marketextend2{
+  opacity:1;
+  display: block;
+  border-radius: 0px 10px 0px 10px;
+  background-color: #28323e;
+  height: auto;
+  margin-top: -10px;
+  transition:opacity 0.2s ease;
+}
 .edit0image{
   border: none;
   background-color: #101419;
@@ -1906,6 +1928,11 @@ margin-top: 40px;
   display: none;
   visibility:hidden ;
   opacity: 0;
+}
+.nops{
+  
+  opacity: 1;
+ 
 }
 .kk0{
  margin-left: 60px;
