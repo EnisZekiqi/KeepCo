@@ -1440,7 +1440,25 @@ a{
   align-content: flex-start;
   width: 100%;
 }
+.hello13{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  width: 100%;
+}
 
+.showedposition1{
+  opacity: 0;
+  display: none;
+}
+.showedposition1x{
+  opacity: 1;
+  display: block;
+  width: 300px;
+  margin-bottom:30px ;
+}
 
 .founderi1{
   width: 350px;
@@ -1495,6 +1513,10 @@ margin-left: -25px;
 
   display: block;
   visibility: visible;
+}
+.xcx1{
+display: none;
+opacity: 0;
 }
 .expandable{
   height: 0;
@@ -1572,6 +1594,7 @@ display: none;
   border-radius: 0px 10px 0px 10px;
   background-color: #28323e;
   height: auto;
+  overflow-y: auto;
   margin-top: -10px;
   transition:opacity 0.2s ease;
 }

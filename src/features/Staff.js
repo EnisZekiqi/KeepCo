@@ -204,67 +204,105 @@ const Staff = () => {
                    whileInView={{opacity:1}}
                    transition={{
                     duration:1,
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20
                   }}
-                  viewport={{ once: true }}
-                  style={{ marginTop:20,marginBottom: 10 }} className='marketi1'>
+                 
+                  style={{ marginTop:20,marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  
+                  `}>
                       <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Natasha Smith</h3>
                        <h5 className="text-center">Programmer</h5>
                        <p className="text-center">Natasha joined our Company 3 years ago and her success has helped our company over the years</p>
-                       <div className={`nops ${isButtonClicked2 === 'agent1' ? 'clickedm' : ''}${isButtonClicked2 === 'agent11' ? 'nops' : ''}`}>
+                       <div className={`nops ${isButtonClicked2 === 'agent1' ? 'clickedm' : ''}${isButtonClicked2 === 'agent11o' ? 'nops' : ''}`}>
                        <Button id="agent1" onClick={()=>showagent('agent1')} style={{width:120,marginLeft:125}} variant="contained" color="five" >Show More</Button>
                        </div>
                        <motion.div 
                        variants={animationi}
                        initial="initial"
                        animate="animate"
-                       className={`marketextend ${isButtonClicked2 === 'agent1' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent11' ? 'marketextend' : ''}`}>
+                       className={`marketextend ${isButtonClicked2 === 'agent1' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent11o' ? 'marketextend' : ''}`}>
                         <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
-                        <Button id="agent11" onClick={()=>showagent('agent11')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent11o" onClick={()=>showagent('agent11o')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
+                      </div>
+                  </motion.div>
+
+                  <motion.div
+                  initial={{opacity:0 }}
+                  whileInView={{opacity:1}}
+                  transition={{
+                   duration:1,
+                 }}
+                  style={{marginTop:20 ,marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
+                  <div className="d-flex flex-column justify-content-center">
+                      <h3 style={{marginTop:20}} className="text-center">Josh Stavn</h3>
+                       <h5 className="text-center">Programmer</h5>
+                       <p className="text-center">Josh is very skilled programer that's the reason he's in our company and we're glad that he's our employee</p>
+                       <div  className={`nops ${isButtonClicked2 === 'agent2' ? 'clickedm' : ''}${isButtonClicked2 === 'agent22' ? 'nops' : ''}`}>
+                       <Button id="agent2" onClick={()=>showagent('agent2')} style={{width:120,marginLeft:125,}} variant="contained" color="five">Show More</Button>
+                       </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent2' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent22' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent22" onClick={()=>showagent('agent22')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
                        </motion.div>
                       </div>
                   </motion.div>
                   <motion.div
                   initial={{opacity:0 }}
-                  whileInView={{opacity:1}}
+                  whileInView={{opacity:1}} 
                   transition={{
                    duration:1,
-                   type: "spring",
-                   stiffness: 260,
-                   damping: 20
                  }}
-                 viewport={{ once: true }}
-                  style={{marginTop:20 ,marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11' ? 'marketi1' : ''}`}>
-                  <div className="d-flex flex-column justify-content-center">
-                      <h3 style={{marginTop:20}} className="text-center">Josh Stavn</h3>
-                       <h5 className="text-center">Programmer</h5>
-                       <p className="text-center">Josh is very skilled programer that's the reason he's in our company and we're glad that he's our employee</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
-                       </div>
-                      </div>
-                  </motion.div>
-                  <motion.div
-                  initial={{opacity:0 }}
-                  whileInView={{opacity:1}}
-                  transition={{
-                   duration:1,
-                   type: "spring",
-                   stiffness: 260,
-                   damping: 20
-                 }}
-                 viewport={{ once: true }}
-                  style={{marginTop:20  ,marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11' ? 'marketi1' : ''}`} >
+                 
+                  style={{marginTop:20  ,marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `} >
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Chandler Dave</h3>
                        <h5 className="text-center">Programmer</h5>
                        <p className="text-center">Chandler is the first programmer in our company he was helpful for the design of the website  </p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent3' ? 'clickedm' : ''}${isButtonClicked2 === 'agent33' ? 'nops' : ''}`}>
+                       <Button id="agent3" onClick={()=>showagent('agent3')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent3' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent33' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent33" onClick={()=>showagent('agent33')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
                   </motion.div>
                 </>
@@ -273,106 +311,314 @@ const Staff = () => {
               {/* Display marketi1 items for Designer */}
               {showDesigner && (
                 <>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  <motion.div 
+                  initial={{opacity:0 }}
+                  whileInView={{opacity:1}} 
+                  transition={{
+                   duration:1,
+                 }}
+                  style={{ marginTop:10, marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Steven Josh</h3>
                        <h5 className="text-center">Designer</h5>
                        <p className="text-center">Steven is responsible for the design of the website in terms of the logo , colors and much more </p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent4' ? 'clickedm' : ''}${isButtonClicked2 === 'agent44' ? 'nops' : ''}`}>
+                       <Button id="agent4" onClick={()=>showagent('agent4')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent4' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent44' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent44" onClick={()=>showagent('agent44')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{marginTop:10,  marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div 
+                  initial={{opacity:0 }}
+                  whileInView={{opacity:1}} 
+                  transition={{
+                   duration:1,
+                 }}
+                  style={{marginTop:10,  marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}  ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Selena Rodriguez</h3>
                        <h5 className="text-center">Designer</h5>
                        <p className="text-center">Selena is our new designer in the field of our company her ideas for design are very impressive</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent5' ? 'clickedm' : ''}${isButtonClicked2 === 'agent55' ? 'nops' : ''}`}>
+                       <Button id="agent5" onClick={()=>showagent('agent5')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent5' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent55' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent55" onClick={()=>showagent('agent55')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{marginTop:10,  marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div
+                  initial={{opacity:0 }}
+                  whileInView={{opacity:1}} 
+                  transition={{
+                   duration:1,
+                 }}
+                  style={{marginTop:10,  marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Veronica Max</h3>
                        <h5 className="text-center">Designer</h5>
                        <p className="text-center">Veronica joined in our team 2 years ago and her skills and ideas as a designer are remarkable   </p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent6' ? 'clickedm' : ''}${isButtonClicked2 === 'agent66' ? 'nops' : ''}`}>
+                       <Button id="agent6" onClick={()=>showagent('agent6')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent6' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent66' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent66" onClick={()=>showagent('agent66')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
+                  </motion.div>
                 </>
               )}
               {/* Display marketi1 items for Marketing */}
               {showMarketing && (
                 <>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  <motion.div
+                  initial={{opacity:0 }}
+                  whileInView={{opacity:1}} 
+                  transition={{
+                   duration:1,
+                 }}
+                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Alan Camora </h3>
                        <h5 className="text-center">Marketing</h5>
                        <p className="text-center">Alan is responsible for marketing in social media to tell people what we do and we can achive together</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div  className={`nops ${isButtonClicked2 === 'agent7' ? 'clickedm' : ''}${isButtonClicked2 === 'agent77' ? 'nops' : ''}`}>
+                       <Button id="agent7" onClick={()=>showagent('agent7')} style={{width:120 ,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent7' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent77' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent77" onClick={()=>showagent('agent77')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div 
+                   initial={{opacity:0 }}
+                   whileInView={{opacity:1}} 
+                   transition={{
+                    duration:1,
+                  }}
+                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Sasha Sloane</h3>
                        <h5 className="text-center">Marketing</h5>
                        <p className="text-center">Sasha is responsible for handling the website in all social medias post daily and much more </p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent8' ? 'clickedm' : ''}${isButtonClicked2 === 'agent88' ? 'nops' : ''}`}>
+                       <Button id="agent8" onClick={()=>showagent('agent8')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent8' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent88' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent88" onClick={()=>showagent('agent88')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{marginTop:10, marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div
+                   initial={{opacity:0 }}
+                   whileInView={{opacity:1}} 
+                   transition={{
+                  }}
+                  style={{marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Josh Grayson</h3>
                        <h5 className="text-center">Marketing</h5>
                        <p className="text-center">Josh has joned our company a year ago and he helps his team with his skills  </p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent9' ? 'clickedm' : ''}${isButtonClicked2 === 'agent99' ? 'nops' : ''}`}>
+                       <Button id="agent9" onClick={()=>showagent('agent9')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent9' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent99' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent99" onClick={()=>showagent('agent99')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
+                  </motion.div>
                 </>
               )}
               {/* Display marketi1 items for Service */}
               {showService && (
                 <>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  <motion.div
+                   initial={{opacity:0 }}
+                   whileInView={{opacity:1}} 
+                   transition={{
+                    duration:1,
+                  }}
+                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `} >
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Kate Cardona</h3>
                        <h5 className="text-center">Service</h5>
                        <p className="text-center">Kate is responsible for communicating with users 24/7 in our website for more support</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent10' ? 'clickedm' : ''}${isButtonClicked2 === 'agent101' ? 'nops' : ''}`}>
+                       <Button id="agent10" onClick={()=>showagent('agent10')}  style={{width:120 ,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent10' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent101' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent101" onClick={()=>showagent('agent101')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div
+                   initial={{opacity:0 }}
+                   whileInView={{opacity:1}} 
+                   transition={{
+                    duration:1,
+                  }}
+                   style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Maria Rodruigez</h3>
                        <h5 className="text-center">Service</h5>
                        <p className="text-center">Marie checks for our website if it is running smoothly and responsive for the users</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent11' ? 'clickedm' : ''}${isButtonClicked2 === 'agent111' ? 'nops' : ''}`}>
+                       <Button id="agent11" onClick={()=>showagent('agent11')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent11' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent111' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent111" onClick={()=>showagent('agent111')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
-                  <div style={{ marginTop:10, marginBottom: 10 }} className="marketi1">
+                  </motion.div>
+                  <motion.div
+                   initial={{opacity:0 }}
+                   whileInView={{opacity:1}} 
+                   transition={{
+                    duration:1,
+                  }}
+                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Nolan Kobi </h3>
                        <h5 className="text-center">Service</h5>
                        <p className="text-center">Nolan checks if our website is in contact with our users and if they gets every answer asked</p>
-                       <div className="d-flex justify-content-center">
-                       <Button style={{width:120}} variant="contained" color="five">Show More</Button>
+                       <div className={`nops ${isButtonClicked2 === 'agent12' ? 'clickedm' : ''}${isButtonClicked2 === 'agent112' ? 'nops' : ''}`}>
+                       <Button id="agent12" onClick={()=>showagent('agent12')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show More</Button>
                        </div>
+                       <motion.div 
+                       variants={animationi}
+                       initial="initial"
+                       animate="animate"
+                       className={`marketextend ${isButtonClicked2 === 'agent12' ? 'marketextend2' : ''}${isButtonClicked2 === 'agent112' ? 'marketextend' : ''}`}>
+                        <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <p style={{marginTop:-20}} className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, provident?</p>
+                        <Button id="agent112" onClick={()=>showagent('agent112')} style={{width:120,marginLeft:125,marginBottom:10}} variant="contained" color="five">Show Less</Button>
+                       </motion.div>
                       </div>
-                  </div>
+                  </motion.div>
                 </>
               )}
             </div>
