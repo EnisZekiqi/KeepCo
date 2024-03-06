@@ -1546,11 +1546,21 @@ position: absolute;
 left: 800px;
 margin-top: 40px;
 }
-
+.upload-cs{
+  width: 300px;
+  height: 100px;
+  border: #3399ff;
+  display: flex;
+  border-radius: 10px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 153, 255,0.1);
+}
 #topofdrill{
   height: 600px;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x:hidden;
 }
 #topofdrill::-webkit-scrollbar-track {
   background-color: #101419; /* Set the color of the scrollbar track */
@@ -1573,6 +1583,11 @@ margin-top: 40px;
   width: 350px;
   height: 220px;
  transition: 0.2s ease;
+ transition: transform 0.3s, filter 0.3s
+}
+.marketi1-container:hover .marketi1 {
+  transform: scale(1.1);
+  filter: blur(2px);
 }
 .marketi2{
 opacity: 0;

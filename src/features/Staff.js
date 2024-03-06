@@ -97,8 +97,46 @@ const Staff = () => {
 
     const showagent = async (contentId) =>{
       setIsButtonClicked2(contentId);
-  }
-
+  } 
+  
+  const handleHover = (e) => {
+    const cards = document.querySelectorAll('.marketi1');
+    cards.forEach(card => {
+      if (card !== e.target) {
+        card.style.filter = 'blur(2px)';
+      } else {
+        card.style.transform = 'scale(1.1)';
+        card.style.filter = 'blur(0px)'; // Remove blur from the hovered card
+      }
+    });
+  };
+  
+  const handleMouseLeave = () => {
+    const cards = document.querySelectorAll('.marketi1');
+    cards.forEach(card => {
+      card.style.transform = 'scale(1)';
+      card.style.filter = 'blur(0px)';
+    });
+  };
+  const handleHover1 = (e) => {
+    const cards = document.querySelectorAll('.marketi1');
+    cards.forEach(card => {
+      if (card !== e.target) {
+        card.style.filter = 'blur(2px)';
+      } else {
+        card.style.transform = 'scale(1.1)';
+        card.style.filter = 'blur(0px)'; // Remove blur from the hovered card
+      }
+    });
+  };
+  
+  const handleMouseLeave1 = () => {
+    const cards = document.querySelectorAll('.marketi1');
+    cards.forEach(card => {
+      card.style.transform = 'scale(1)';
+      card.style.filter = 'blur(0px)';
+    });
+  };
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     return ( 
@@ -202,11 +240,12 @@ const Staff = () => {
                   <motion.div 
                    initial={{opacity:0 }}
                    whileInView={{opacity:1}}
+                   
                    transition={{
                     duration:1,
                   }}
                  
-                  style={{ marginTop:20,marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  style={{ marginTop:20,marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
@@ -214,8 +253,9 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   
-                  `}>
+                  `}  >
                       <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Natasha Smith</h3>
                        <h5 className="text-center">Programmer</h5>
@@ -241,7 +281,7 @@ const Staff = () => {
                   transition={{
                    duration:1,
                  }}
-                  style={{marginTop:20 ,marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
+                  style={{marginTop:20 ,marginBottom: 10 }} onMouseEnter={handleHover1} onMouseLeave={handleMouseLeave1} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
@@ -251,7 +291,8 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
-                  `}>
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
+                  `}   >
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Josh Stavn</h3>
                        <h5 className="text-center">Programmer</h5>
@@ -277,7 +318,7 @@ const Staff = () => {
                    duration:1,
                  }}
                  
-                  style={{marginTop:20  ,marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{marginTop:20  ,marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -286,6 +327,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `} >
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Chandler Dave</h3>
@@ -317,7 +359,7 @@ const Staff = () => {
                   transition={{
                    duration:1,
                  }}
-                  style={{ marginTop:10, marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{ marginTop:10, marginBottom: 10 }}  onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -326,6 +368,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Steven Josh</h3>
@@ -351,7 +394,7 @@ const Staff = () => {
                   transition={{
                    duration:1,
                  }}
-                  style={{marginTop:10,  marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{marginTop:10,  marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''}  ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
@@ -359,6 +402,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Selena Rodriguez</h3>
@@ -384,7 +428,7 @@ const Staff = () => {
                   transition={{
                    duration:1,
                  }}
-                  style={{marginTop:10,  marginBottom: 10 }}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{marginTop:10,  marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent7' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent77' ? 'marketi1' : ''}
@@ -392,6 +436,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Veronica Max</h3>
@@ -422,7 +467,7 @@ const Staff = () => {
                   transition={{
                    duration:1,
                  }}
-                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{ marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -430,6 +475,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Alan Camora </h3>
@@ -455,7 +501,7 @@ const Staff = () => {
                    transition={{
                     duration:1,
                   }}
-                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{ marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -463,6 +509,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Sasha Sloane</h3>
@@ -486,8 +533,9 @@ const Staff = () => {
                    initial={{opacity:0 }}
                    whileInView={{opacity:1}} 
                    transition={{
+                    duration:1
                   }}
-                  style={{marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -495,6 +543,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Josh Grayson</h3>
@@ -519,13 +568,14 @@ const Staff = () => {
               {/* Display marketi1 items for Service */}
               {showService && (
                 <>
+                
                   <motion.div
                    initial={{opacity:0 }}
                    whileInView={{opacity:1}} 
                    transition={{
                     duration:1,
                   }}
-                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{ marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -533,6 +583,7 @@ const Staff = () => {
                   ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent11' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent111' ? 'marketi1' : ''}
+                  ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                   `} >
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Kate Cardona</h3>
@@ -558,7 +609,7 @@ const Staff = () => {
                    transition={{
                     duration:1,
                   }}
-                   style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                   style={{ marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                    ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                    ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                    ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -566,6 +617,7 @@ const Staff = () => {
                    ${isButtonClicked2 === 'agent8' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent88' ? 'marketi1' : ''}
                    ${isButtonClicked2 === 'agent9' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent99' ? 'marketi1' : ''}
                    ${isButtonClicked2 === 'agent10' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent101' ? 'marketi1' : ''}
+                   ${isButtonClicked2 === 'agent12' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent112' ? 'marketi1' : ''}
                    `}>
                   <div className="d-flex flex-column justify-content-center">
                       <h3 style={{marginTop:20}} className="text-center">Maria Rodruigez</h3>
@@ -591,7 +643,7 @@ const Staff = () => {
                    transition={{
                     duration:1,
                   }}
-                  style={{ marginTop:10, marginBottom: 10 }} className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
+                  style={{ marginTop:10, marginBottom: 10 }} onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}  className={`marketi1 ${isButtonClicked2 === 'agent1' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent11o' ? 'marketi1' : ''}${isButtonClicked2 === 'agent2' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent22' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent3' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent33' ? 'marketi1' : ''} ${isButtonClicked2 === 'agent4' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent44' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent5' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent55' ? 'marketi1' : ''}
                   ${isButtonClicked2 === 'agent6' ? 'marketi2' : ''} ${isButtonClicked2 === 'agent66' ? 'marketi1' : ''}
@@ -628,7 +680,7 @@ const Staff = () => {
     </div>
 
             <div className="empty4"></div>
-            <div className="empty4"></div>
+            
         </div>
      );
 }
