@@ -1557,6 +1557,13 @@ margin-top: 40px;
   justify-content: center;
   background-color: rgba(51, 153, 255,0.1);
 }
+.llabellat{
+  background-color: #101419;
+  border-bottom:2px solid #3399ff;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+}
 #topofdrill{
   height: 600px;
   overflow-y: auto;

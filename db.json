@@ -1,34 +1,3 @@
 {
-  "blogs": [
-    {
-      "title": "First Blog ",
-      "body": "This is the First Blog that is added in this course ",
-      "author": "mario",
-      "id": 1
-    },
-    {
-      "title": "lelelele",
-      "body": "evavadxava",
-      "author": "mario",
-      "id": 2
-    },
-    {
-      "title": "qerqerq",
-      "body": "qerqerqer",
-      "author": "mario",
-      "id": 3
-    },
-    {
-      "title": "eqqe",
-      "body": "qeaxacv",
-      "author": "mario",
-      "id": 4
-    },
-    {
-      "title": "ylli",
-      "body": "ylli bueno",
-      "author": "mario",
-      "id": 5
-    }
-  ]
+  
 }
