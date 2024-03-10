@@ -1453,6 +1453,21 @@ a{
   opacity: 0;
   display: none;
 }
+@media (max-width: 991px) {
+  .showedposition1x{
+ margin-left: 200px;
+  }
+ }
+ @media (max-width: 876px) {
+  .showedposition1x{
+ margin-left: 100px;
+  }
+ }
+ @media (max-width: 499px) {
+  .showedposition1x{
+ margin-left: 0px;
+  }
+ }
 .showedposition1x{
   opacity: 1;
   display: block;
